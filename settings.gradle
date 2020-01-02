@@ -1,2 +1,2 @@
-include ''
-rootProject.name='PrintTextDemo'
+include ':app'
+rootProject.name='PrintDemo'
