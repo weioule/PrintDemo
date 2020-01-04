@@ -26,8 +26,8 @@ demo里面还用到了lombok注解框架，主要是用于注解数据模型的g
 二  蒙层提示
 <br>
 效果图如下：
-<br>
-&nbsp;&nbsp;![image](https://github.com/weioule/PrintDemo/blob/master/app/info/img001.png)&nbsp;&nbsp;
+
+![image](https://github.com/weioule/PrintDemo/blob/master/app/info/img001.png)&nbsp;&nbsp;
 ![image](https://github.com/weioule/PrintDemo/blob/master/app/info/img002.png)&nbsp;&nbsp;
 ![image](https://github.com/weioule/PrintDemo/blob/master/app/info/img003.png)&nbsp;&nbsp;
 ![image](https://github.com/weioule/PrintDemo/blob/master/app/info/img004.png)&nbsp;&nbsp;
