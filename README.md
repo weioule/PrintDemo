@@ -1,10 +1,13 @@
-# PrinttextDemo
-这个一个Android蓝牙打印小票demo，类似美团外卖小票打印
+# PrintDemo
+这个一个Android蓝牙打印小票demo，类似美团外卖小票打印 和 蒙层提示demo
 
 
-先看一下效果图哈：
-&nbsp;&nbsp;![image](https://github.com/weioule/PrintDemo/blob/master/app/info/img01.png)&nbsp;&nbsp;
-![image](https://github.com/weioule/PrintDemo/blob/master/app/info/img01.png)
+一 小票打印
+<br>
+先看一下效果图：
+
+![image](https://github.com/weioule/PrintDemo/blob/master/app/info/img01.png)&nbsp;&nbsp;
+![image](https://github.com/weioule/PrintDemo/blob/master/app/info/img02.png)
 
 demo里主要是使用汉印打印机进行蓝牙小票打印，它还支持WiFi打印，USB打印和串口打印，SDK对接的话去汉印官网下载相应的zip包，里面有PDF文档和代码案例，文档上功能还是比较多的，比如与蓝牙进行关联以及各种状态获取以及各种属性设置等，项目里面我放了一份PDF的文档，就在info文件夹下。
 
@@ -15,6 +18,48 @@ demo里主要是使用汉印打印机进行蓝牙小票打印，它还支持WiFi
 当然，个别特殊都样式设置就看着改，基本的样式我也封装了些方法，不够再加，如是接的sdk就根据文档给的功能增加，若是按原生的写法通过字节流传输给蓝牙打印机的，也可以将指令写入封装成方法进行添加设置。
 
 demo里面还用到了lombok注解框架，主要是用于注解数据模型的get 和 set方法，这样就不需要写那么多凌乱的get() 和 set()了。
+
+
+
+
+<br> 
+二  蒙层提示
+<br>
+效果图如下：
+<br>
+&nbsp;&nbsp;![image](https://github.com/weioule/PrintDemo/blob/master/app/info/img001.png)&nbsp;&nbsp;
+![image](https://github.com/weioule/PrintDemo/blob/master/app/info/img002.png)&nbsp;&nbsp;
+![image](https://github.com/weioule/PrintDemo/blob/master/app/info/img003.png)&nbsp;&nbsp;
+![image](https://github.com/weioule/PrintDemo/blob/master/app/info/img004.png)&nbsp;&nbsp;
+![image](https://github.com/weioule/PrintDemo/blob/master/app/info/img005.png)&nbsp;&nbsp;
+![image](https://github.com/weioule/PrintDemo/blob/master/app/info/img006.png)&nbsp;&nbsp;
+
+demo里的蒙层提示，主要是将目标控件抠出来，提示指向的既是页面中真实展示的控件，这样蒙层消失后用户的焦点感觉就会如德芙般纵享丝滑。
+
+接下来说一说用法，主要是HintView这个类
+在使用时setTargetView(); 将所要指向的目标view传进去，里面会自动对目标view大小与坐标进行测量，然后在蒙层上复制抠出一个完全透明的view，即可完全展示出底层的目标view 。
+<br> 
+setCustomGuideView(); 就是将所要提示的带有提示语和箭头的布局view传进，里面会根据所setDirction()设置的方向和setOffset() X轴、Y轴的偏移量将改布局进行排版展示。
+<br> 
+setMoreTransparentView(); 是传其他需要抠图的控件，需要展示出来的控件里面一并给抠出来
+<br> 
+setShape(); 设置抠图的形状，有圆形，矩形，椭圆形
+<br> 
+setOutsideShape(); 设置绘制目标控件的外围形状，一样可以绘制圆形，矩形，椭圆形
+<br> 
+setOutsideSpace(); 设置外围与目标控件的间隔
+<br> 
+setRadius(); 设置抠出目标控件的圆角，应与目标控件圆角一致
+<br> 
+setDotted(); 设置围围形状图的虚线实线
+<br> 
+setCancelable(); 设置是否点击屏幕消失
+<br> 
+
+项目里还使用了带阴影背景的LCardView 和 自定义圆角图片控件RoundedImageView
+
+在使用时需要注意：当目标控件完全展示出来后再调用展示提示的方法，因为里面需要使用目标控件的信息，目标控件要展示后才能获取到宽高、坐标等信息。
+
 
 
 
