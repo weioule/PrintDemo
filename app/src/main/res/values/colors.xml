@@ -13,4 +13,6 @@
     <color name="txt_color_c9">#C9C9C9</color>
     <color name="transparent">#00000000</color>
     <color name="line_color">#f1f1f1</color>
+
+    <color name="transparent_hint">#b4000000</color>
 </resources>

@@ -14,6 +14,7 @@ android {
         //添加如下配置就OK了
         javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -25,6 +26,12 @@ android {
         main {
             jniLibs.srcDirs = ['libs']
         }
+    }
+
+    //https://www.jianshu.com/p/49ff4c7c1e29
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
@@ -49,4 +56,12 @@ dependencies {
     implementation files('libs/Android_Print_SDK_ESC_V1.11.jar')
 
     implementation 'com.github.promeg:tinypinyin:1.0.0'
+
+    //可定制颜色值与阴影区域的cardView
+    implementation 'org.linwg1988:lcardview:1.4.2'
+
+    implementation 'me.grantland:autofittextview:0.2.1'
+
+    implementation 'com.jakewharton:butterknife:10.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
 }

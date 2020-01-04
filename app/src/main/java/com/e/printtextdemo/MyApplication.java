@@ -8,6 +8,8 @@ import android.text.TextUtils;
 import android.view.Window;
 import android.widget.TextView;
 
+import com.e.printtextdemo.activity.MainActivity;
+
 /**
  * Created by weioule
  * on 2020/1/1
@@ -16,6 +18,7 @@ public class MyApplication extends Application {
     //自定义内容加载提示窗
     private static AlertDialog loadingDialog;
     public static Context appContext;
+    private Activity activity;
 
     @Override
     public void onCreate() {
@@ -23,11 +26,18 @@ public class MyApplication extends Application {
         appContext = this;
     }
 
+    public void setMainActivity(MainActivity activity) {
+        this.activity = activity;
+    }
+
+    public Activity getMainActivity() {
+        return activity;
+    }
+
     public static void showLoading(Activity activity, String content) {
         hideLoading();
         loadingDialog = new AlertDialog.Builder(activity, R.style.alert_dialog).create();
         loadingDialog.setCancelable(false);
-//		loadingDialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE);
         if (!activity.isFinishing()) {
             loadingDialog.show();
             Window window = loadingDialog.getWindow();

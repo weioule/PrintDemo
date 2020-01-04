@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/hint_img"
+        android:layout_width="303dp"
+        android:layout_height="46dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/hint_while_playing_img" />
+
+    <ImageView
+        android:id="@+id/tv_know"
+        android:layout_width="181dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="173dp"
+        android:background="@drawable/hint_tv_know" />
+
+</RelativeLayout>
