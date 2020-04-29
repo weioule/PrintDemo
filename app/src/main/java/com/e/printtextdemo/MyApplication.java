@@ -9,6 +9,7 @@ import android.view.Window;
 import android.widget.TextView;
 
 import com.e.printtextdemo.activity.MainActivity;
+import com.e.printtextdemo.utils.ToastUtil;
 
 /**
  * Created by weioule
@@ -17,8 +18,12 @@ import com.e.printtextdemo.activity.MainActivity;
 public class MyApplication extends Application {
     //自定义内容加载提示窗
     private static AlertDialog loadingDialog;
+    private static ToastUtil toastUtil;
     public static Context appContext;
     private Activity activity;
+
+    public static int currentPrintType;//打印机类型：1 汉印   2 爱印
+    public static String currentPrinAddress;//打印机mac地址
 
     @Override
     public void onCreate() {
@@ -45,7 +50,6 @@ public class MyApplication extends Application {
             if (!TextUtils.isEmpty(content))
                 ((TextView) window.findViewById(R.id.contentView)).setText(content);
         }
-
     }
 
     /*******
@@ -62,5 +66,21 @@ public class MyApplication extends Application {
             }
         }
         loadingDialog = null;
+    }
+
+    public static void showToast(int id) {
+        if (null == toastUtil) {
+            toastUtil = ToastUtil.getInstance();
+        }
+
+        toastUtil.show(id);
+    }
+
+    public static void showToast(String msg) {
+        if (null == toastUtil) {
+            toastUtil = ToastUtil.getInstance();
+        }
+
+        toastUtil.show(msg);
     }
 }

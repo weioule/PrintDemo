@@ -1,122 +1,59 @@
 package com.e.printtextdemo.activity;
 
-import android.bluetooth.BluetoothAdapter;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.e.printtextdemo.widget.ConnectPrinterDialog;
+import com.e.printtextdemo.MyApplication;
 import com.e.printtextdemo.NoDoubleClickListener;
-import com.e.printtextdemo.model.OrderBean;
-import com.e.printtextdemo.utils.PrintUtil;
 import com.e.printtextdemo.R;
-import com.e.printtextdemo.utils.ToastUtil;
-
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-
-import HPRTAndroidSDK.HPRTPrinterHelper;
-import print.Print;
+import com.e.printtextdemo.utils.PrintUtil;
 
 
 /**
  * Created by weioule
  * on 2020/1/1
  */
-public class MainActivity extends AppCompatActivity implements ConnectPrinterDialog.DismissListener {
-
-    private ExecutorService executorService = Executors.newSingleThreadExecutor();
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        findViewById(R.id.print_text).setOnClickListener(new NoDoubleClickListener() {
-            @Override
-            public void onNoDoubleClick(View view) {
-                printPrepare(null);
-            }
-        });
-
-        findViewById(R.id.mask_hint).setOnClickListener(new NoDoubleClickListener() {
-            @Override
-            public void onNoDoubleClick(View view) {
-                startActivity(new Intent(MainActivity.this, MaskHintActivity.class));
-            }
-        });
+        findViewById(R.id.select_printer).setOnClickListener(listener);
+        findViewById(R.id.print_text).setOnClickListener(listener);
+        findViewById(R.id.mask_hint).setOnClickListener(listener);
     }
 
-    public void printPrepare(OrderBean data) {
-        if (!EnableBluetooth()) return;
-        if (!Print.IsOpened()) {
-            new ConnectPrinterDialog(this).show(this);
-        } else if (!isConnect()) {
-            ToastUtil.getInstance().show(getString(R.string.abnormal_printer_status));
-            new ConnectPrinterDialog(this).show(this);
+    private NoDoubleClickListener listener = new NoDoubleClickListener() {
+        @Override
+        public void onNoDoubleClick(View view) {
+            switch (view.getId()) {
+                case R.id.select_printer:
+                    startActivity(new Intent(MainActivity.this, SelectPrinterActivity.class));
+                    break;
+                case R.id.print_text:
+                    print();
+                    break;
+                case R.id.mask_hint:
+                    startActivity(new Intent(MainActivity.this, MaskHintActivity.class));
+                    break;
+            }
+        }
+    };
+
+    private void print() {
+        if (1 == MyApplication.currentPrintType) {
+            MyApplication.showLoading(this, "");
+            PrintUtil.printHY(this, null);
+        } else if (2 == MyApplication.currentPrintType) {
+            MyApplication.showLoading(this, "");
+            PrintUtil.printAY(this);
         } else {
-            print(data);
+            MyApplication.showToast("请先选择打印机");
         }
-    }
-
-    private void print(final OrderBean data) {
-        executorService.execute(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    PrintUtil.printText(data);
-                } catch (Exception e) {
-                }
-            }
-        });
-    }
-
-    //EnableBluetooth
-    private boolean EnableBluetooth() {
-        boolean bRet = false;
-        BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-        if (mBluetoothAdapter != null) {
-            if (mBluetoothAdapter.isEnabled())
-                return true;
-            mBluetoothAdapter.enable();
-            try {
-                Thread.sleep(500);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            if (!mBluetoothAdapter.isEnabled())
-                bRet = true;
-            else
-                ToastUtil.getInstance().show(getString(R.string.please_on_the_bluetooth_first));
-        } else {
-            ToastUtil.getInstance().show(getString(R.string.get_bluetooth_status_exception));
-            Log.d("EnableBluetooth", (new StringBuilder("PickFragment --> EnableBluetooth() ").append("Bluetooth Adapter is null.")).toString());
-        }
-        return bRet;
-    }
-
-
-    private boolean isConnect() {
-        String status = "";
-        try {
-            byte[] statusData = HPRTPrinterHelper.GetRealTimeStatus((byte) HPRTPrinterHelper.PRINTER_REAL_TIME_STATUS_ITEM_PRINTER);
-
-            for (byte statusDatum : statusData) {
-                status += statusDatum;
-            }
-
-        } catch (Exception e) {
-            Log.d("HPRTSDKSample", (new StringBuilder("Activity_Status --> Refresh ")).append(e.getMessage()).toString());
-        }
-
-        return "18".equals(status) ? true : false;
-    }
-
-    @Override
-    public void dismiss() {
-        print(null);
     }
 }

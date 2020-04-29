@@ -36,32 +36,25 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-
     //noinspection GradleCompatible
     implementation 'com.android.support:design:28.0.0'
-
     //注解get Set+
     implementation 'org.projectlombok:lombok:1.18.6'
-
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.50'
-
     implementation 'com.github.ybq:Android-SpinKit:1.2.0'
-
     implementation files('libs/Android_Print_SDK_ESC_V1.11.jar')
-
     implementation 'com.github.promeg:tinypinyin:1.0.0'
-
     //可定制颜色值与阴影区域的cardView
     implementation 'org.linwg1988:lcardview:1.4.2'
-
     implementation 'me.grantland:autofittextview:0.2.1'
-
     implementation 'com.jakewharton:butterknife:10.0.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+    implementation 'com.github.limxing:Android-PromptDialog:1.1.3'
+    implementation files('libs/android_print_sdk .jar')
 }

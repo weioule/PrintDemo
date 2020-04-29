@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".activity.MainActivity">
 
-
     <Button
         android:id="@+id/mask_hint"
         android:layout_width="wrap_content"
@@ -22,8 +21,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="35dp"
-        android:text=" 打印小票"
+        android:text="打印小票"
         app:layout_constraintBottom_toTopOf="@+id/mask_hint"
         app:layout_constraintLeft_toLeftOf="@+id/mask_hint"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/select_printer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="35dp"
+        android:text="选择打印机"
+        app:layout_constraintBottom_toTopOf="@+id/print_text"
+        app:layout_constraintLeft_toLeftOf="@+id/print_text"
         tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,4 +8,10 @@
     <string name="no_matching_device_available">暂无配对的打印机！</string>
     <string name="please_on_the_bluetooth_first">请先打开蓝牙！</string>
     <string name="get_bluetooth_status_exception">获取蓝牙状态异常！</string>
+    <string name="no_bounded_device">未找到名称以 %s 开头的设备</string>
+    <string name="bt_connecting">正在连接...</string>
+    <string name="bt_connect_success">连接成功</string>
+    <string name="bt_connect_printer">连接打印机</string>
+    <string name="bt_connect_failed">连接失败，请重试</string>
+    <string name="bt_connect_closed">连接已关闭</string>
 </resources>

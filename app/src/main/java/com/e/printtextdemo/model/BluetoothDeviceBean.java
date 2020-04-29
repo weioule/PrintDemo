@@ -11,4 +11,5 @@ import lombok.Data;
 public class BluetoothDeviceBean {
     private String address;
     private String name;
+    private boolean isSelected;
 }
