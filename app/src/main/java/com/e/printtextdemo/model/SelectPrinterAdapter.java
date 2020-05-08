@@ -1,12 +1,14 @@
 package com.e.printtextdemo.model;
 
 import android.app.Activity;
+import android.text.TextUtils;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.caysn.autoreplyprint.AutoReplyPrint;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.e.printtextdemo.MyApplication;
@@ -44,7 +46,8 @@ public class SelectPrinterAdapter extends BaseQuickAdapter<BluetoothDeviceBean, 
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
-                        if (Print.IsOpened() && PrintUtil.isConnect())
+                        //PrintUtil.isConnect()=""为断开连接
+                        if (Print.IsOpened() && !TextUtils.isEmpty(PrintUtil.isConnect()))
                             mSelectedPosition = viewHolder.getAdapterPosition();
                         updateCheckBox(cb, viewHolder, device);
                     }
@@ -53,7 +56,20 @@ public class SelectPrinterAdapter extends BaseQuickAdapter<BluetoothDeviceBean, 
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
-                        if (SelectPrinterActivity.mPrinter.getPrinterStatus() == 0)
+                        //status=16为断开连接
+                        if (SelectPrinterActivity.mPrinter.isConnected() && SelectPrinterActivity.mPrinter.getPrinterStatus() != 16)
+                            mSelectedPosition = viewHolder.getAdapterPosition();
+                        updateCheckBox(cb, viewHolder, device);
+                    }
+                }).start();
+            } else if (device.getName().startsWith("FK-") && null != SelectPrinterActivity.pointer) {
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        boolean isOpened = AutoReplyPrint.INSTANCE.CP_Port_IsOpened(SelectPrinterActivity.pointer);
+                        int status = AutoReplyPrint.INSTANCE.CP_Pos_QueryRTStatus(SelectPrinterActivity.pointer, 10000);
+                        //status=0为断开连接
+                        if (isOpened && status != 0)
                             mSelectedPosition = viewHolder.getAdapterPosition();
                         updateCheckBox(cb, viewHolder, device);
                     }
@@ -66,10 +82,10 @@ public class SelectPrinterAdapter extends BaseQuickAdapter<BluetoothDeviceBean, 
     }
 
     private void updateCheckBox(CheckBox cb, @NonNull BaseViewHolder viewHolder, BluetoothDeviceBean device) {
-        MyApplication.hideLoading();
         activity.runOnUiThread(new Runnable() {
             @Override
             public void run() {
+                MyApplication.hideLoading();
                 cb.setChecked(viewHolder.getAdapterPosition() == mSelectedPosition);
                 device.setSelected(viewHolder.getAdapterPosition() == mSelectedPosition);
             }

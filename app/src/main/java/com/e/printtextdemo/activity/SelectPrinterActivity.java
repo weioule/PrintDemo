@@ -18,11 +18,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.android_print_sdk.PrinterType;
 import com.android_print_sdk.bluetooth.BluetoothPrinter;
+import com.caysn.autoreplyprint.AutoReplyPrint;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.e.printtextdemo.MyApplication;
 import com.e.printtextdemo.R;
 import com.e.printtextdemo.model.BluetoothDeviceBean;
 import com.e.printtextdemo.model.SelectPrinterAdapter;
+import com.sun.jna.Pointer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,6 +38,9 @@ public class SelectPrinterActivity extends AppCompatActivity implements View.OnC
     private RecyclerView devicesList;
     private SelectPrinterAdapter mAdapter;
     public static BluetoothPrinter mPrinter;
+    private BluetoothPrinter oldAYPinter;
+    public static Pointer pointer;
+    private Pointer oldFKPinter;
     private String currentAddress;
     private Thread thread;
 
@@ -98,6 +103,7 @@ public class SelectPrinterActivity extends AppCompatActivity implements View.OnC
                     if (device.isSelected()) {
                         name = device.getName();
                         address = device.getAddress();
+                        break;
                     }
                 }
 
@@ -110,6 +116,8 @@ public class SelectPrinterActivity extends AppCompatActivity implements View.OnC
                         initAYPrinter(address, name);
                     } else if (name.startsWith("MPT-")) {
                         initHYPrinter(address);
+                    } else if (name.startsWith("FK-")) {
+                        initFKPrinter(address);
                     } else {
                         MyApplication.showToast("暂不支持该打印设备");
                     }
@@ -156,7 +164,12 @@ public class SelectPrinterActivity extends AppCompatActivity implements View.OnC
                 try {
                     Print.Initialize();
                     Print.SetPrintDensity((byte) 127);
-
+                    try {
+                        //关闭旧的打印机，换当前型号打印机情况
+                        Print.PortClose();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                     int portOpen = Print.PortOpen(getApplicationContext(), "Bluetooth," + address);
                     Message message = new Message();
                     message.what = portOpen;
@@ -171,6 +184,7 @@ public class SelectPrinterActivity extends AppCompatActivity implements View.OnC
     }
 
     private void initAYPrinter(String address, String deviceName) {
+        oldAYPinter = mPrinter;
         mPrinter = new BluetoothPrinter(address, 0);
 
         if (mPrinter.isPrinterNull()) {
@@ -187,6 +201,23 @@ public class SelectPrinterActivity extends AppCompatActivity implements View.OnC
         mPrinter.openConnection();
     }
 
+    private void initFKPrinter(String address) {
+        btn_connect.setText(R.string.bt_connecting);
+        btn_connect.setEnabled(false);
+        currentAddress = address;
+
+        AutoReplyPrint.INSTANCE.CP_Port_AddOnPortOpenedEvent(opened_callback, Pointer.NULL);
+        AutoReplyPrint.INSTANCE.CP_Port_AddOnPortOpenFailedEvent(openfailed_callback, Pointer.NULL);
+        AutoReplyPrint.INSTANCE.CP_Port_AddOnPortClosedEvent(closed_callback, Pointer.NULL);
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                oldFKPinter = pointer;
+                pointer = AutoReplyPrint.INSTANCE.CP_Port_OpenBtSpp(address, 0);
+            }
+        }).start();
+    }
 
     private Handler handler = new Handler() {
         public void handleMessage(Message msg) {
@@ -199,11 +230,13 @@ public class SelectPrinterActivity extends AppCompatActivity implements View.OnC
                     Thread dummy = thread;
                     thread = null;
                     dummy.interrupt();
-                    MyApplication.showToast("连接成功");
                     //关闭爱印打印机
-                    if (null != mPrinter)
+                    if (null != mPrinter) {
                         mPrinter.closeConnection();
-                    finish();
+                        mPrinter = null;
+                    }
+                    closeFKPrinter(pointer);
+                    tofinish();
                 }
             } else {
                 MyApplication.showToast(getString(R.string.connection_fails));
@@ -225,14 +258,19 @@ public class SelectPrinterActivity extends AppCompatActivity implements View.OnC
                     MyApplication.currentPrinAddress = currentAddress;
                     btn_connect.setText(R.string.bt_connect_printer);
                     btn_connect.setEnabled(true);
-                    MyApplication.showToast(getString(R.string.bt_connect_success));
                     try {
+                        //关闭旧的打印机，换当前型号打印机情况
+                        if (null != oldAYPinter) {
+                            oldAYPinter.closeConnection();
+                            oldAYPinter = null;
+                        }
                         //关闭汉印打印机
                         Print.PortClose();
+                        closeFKPrinter(pointer);
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
-                    finish();
+                    tofinish();
                     break;
                 case BluetoothPrinter.Handler_Connect_Failed:
                     btn_connect.setText(R.string.bt_connect_printer);
@@ -247,4 +285,70 @@ public class SelectPrinterActivity extends AppCompatActivity implements View.OnC
             }
         }
     };
+    AutoReplyPrint.CP_OnPortOpenedEvent_Callback opened_callback = new AutoReplyPrint.CP_OnPortOpenedEvent_Callback() {
+        @Override
+        public void CP_OnPortOpenedEvent(Pointer handle, String name, Pointer private_data) {
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    MyApplication.currentPrintType = 3;
+                    MyApplication.currentPrinAddress = currentAddress;
+                    btn_connect.setText(R.string.bt_connect_printer);
+                    btn_connect.setEnabled(true);
+                    try {
+                        if (null != oldFKPinter)
+                            closeFKPrinter(oldFKPinter);
+                        //关闭汉印打印机
+                        Print.PortClose();
+                        //关闭爱印打印机
+                        if (null != mPrinter) {
+                            mPrinter.closeConnection();
+                            mPrinter = null;
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                    tofinish();
+                }
+            });
+        }
+    };
+    AutoReplyPrint.CP_OnPortOpenFailedEvent_Callback openfailed_callback = new AutoReplyPrint.CP_OnPortOpenFailedEvent_Callback() {
+        @Override
+        public void CP_OnPortOpenFailedEvent(Pointer handle, String name, Pointer private_data) {
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    btn_connect.setText(R.string.bt_connect_printer);
+                    btn_connect.setEnabled(true);
+                    MyApplication.showToast(getString(R.string.bt_connect_failed));
+                }
+            });
+        }
+    };
+    AutoReplyPrint.CP_OnPortClosedEvent_Callback closed_callback = new AutoReplyPrint.CP_OnPortClosedEvent_Callback() {
+        @Override
+        public void CP_OnPortClosedEvent(Pointer h, Pointer private_data) {
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    closeFKPrinter(h);
+                    MyApplication.showToast(getString(R.string.bt_connect_closed));
+                }
+            });
+        }
+    };
+
+    private void closeFKPrinter(Pointer pointer) {
+        if (pointer != Pointer.NULL) {
+            AutoReplyPrint.INSTANCE.CP_Port_Close(pointer);
+            pointer = Pointer.NULL;
+            pointer = null;
+        }
+    }
+
+    public void tofinish() {
+        setResult(MainActivity.RESULT_CODE);
+        finish();
+    }
 }

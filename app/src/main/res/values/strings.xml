@@ -5,6 +5,7 @@
     <string name="connection_successful">连接成功！</string>
     <string name="connection_fails">连接失败，请重试！</string>
     <string name="abnormal_printer_status">打印机状态异常！</string>
+    <string name="abnormal_printer_close">打印机连接已断开！</string>
     <string name="no_matching_device_available">暂无配对的打印机！</string>
     <string name="please_on_the_bluetooth_first">请先打开蓝牙！</string>
     <string name="get_bluetooth_status_exception">获取蓝牙状态异常！</string>

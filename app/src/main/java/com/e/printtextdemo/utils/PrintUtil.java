@@ -5,15 +5,18 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.os.SystemClock;
+import android.text.TextUtils;
 
 import com.android_print_sdk.Barcode;
 import com.android_print_sdk.bluetooth.BluetoothPrinter;
+import com.caysn.autoreplyprint.AutoReplyPrint;
 import com.e.printtextdemo.MyApplication;
 import com.e.printtextdemo.R;
 import com.e.printtextdemo.activity.SelectPrinterActivity;
 import com.e.printtextdemo.model.FoodBean;
 import com.e.printtextdemo.model.OrderBean;
 import com.github.promeg.pinyinhelper.Pinyin;
+import com.sun.jna.Pointer;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -422,12 +425,15 @@ public class PrintUtil {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                if (!Print.IsOpened() || !isConnect()) {
+                if (!Print.IsOpened() || !"18".equals(isConnect())) {
                     activity.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
                             MyApplication.hideLoading();
-                            MyApplication.showToast(R.string.abnormal_printer_status);
+                            if (TextUtils.isEmpty(PrintUtil.isConnect()))
+                                MyApplication.showToast(activity.getString(R.string.abnormal_printer_close));
+                            else
+                                MyApplication.showToast(activity.getString(R.string.abnormal_printer_status));
                         }
                     });
                     return;
@@ -568,7 +574,10 @@ public class PrintUtil {
                         @Override
                         public void run() {
                             MyApplication.hideLoading();
-                            MyApplication.showToast(R.string.abnormal_printer_status);
+                            if (16 == mPrinter.getPrinterStatus())
+                                MyApplication.showToast(activity.getString(R.string.abnormal_printer_close));
+                            else
+                                MyApplication.showToast(activity.getString(R.string.abnormal_printer_status));
                         }
                     });
                     return;
@@ -684,7 +693,141 @@ public class PrintUtil {
         }).start();
     }
 
-    public static boolean isConnect() {
+    public static void printFK(Activity activity) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                Pointer pointer = SelectPrinterActivity.pointer;
+                int status = 0;
+                if (null != pointer)
+                    status = AutoReplyPrint.INSTANCE.CP_Pos_QueryRTStatus(pointer, 10000);
+                if (303174162 != status) {
+                    int finalStatus = status;
+                    activity.runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            MyApplication.hideLoading();
+                            if (0 == finalStatus)
+                                MyApplication.showToast(activity.getString(R.string.abnormal_printer_close));
+                            else
+                                MyApplication.showToast(activity.getString(R.string.abnormal_printer_status));
+                        }
+                    });
+                    return;
+                }
+
+                activity.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        MyApplication.hideLoading();
+                    }
+                });
+
+                PrintUtil print = new PrintUtil();
+
+                try {
+                    AutoReplyPrint.INSTANCE.CP_Pos_ResetPrinter(pointer);
+                    AutoReplyPrint.INSTANCE.CP_Pos_SetMultiByteMode(pointer);
+
+                    AutoReplyPrint.INSTANCE.CP_Pos_SetTextBold(pointer, 1);
+                    AutoReplyPrint.INSTANCE.CP_Pos_SetTextScale(pointer, 1, 1);
+                    AutoReplyPrint.INSTANCE.CP_Pos_SetAlignment(pointer, AutoReplyPrint.CP_Pos_Alignment_HCenter);
+                    AutoReplyPrint.INSTANCE.CP_Pos_SetMultiByteEncoding(pointer, AutoReplyPrint.CP_MultiByteEncoding_UTF8);
+                    AutoReplyPrint.INSTANCE.CP_Pos_PrintText(pointer, "美团外卖");
+                    AutoReplyPrint.INSTANCE.CP_Pos_FeedLine(pointer, 1);
+
+                    AutoReplyPrint.INSTANCE.CP_Pos_SetTextBold(pointer, 0);
+                    AutoReplyPrint.INSTANCE.CP_Pos_SetTextScale(pointer, 0, 0);
+
+                    AutoReplyPrint.INSTANCE.CP_Pos_FeedLine(pointer, 2);
+                    AutoReplyPrint.INSTANCE.CP_Pos_SetMultiByteEncoding(pointer, AutoReplyPrint.CP_MultiByteEncoding_GBK);
+                    AutoReplyPrint.INSTANCE.CP_Pos_SetAlignment(pointer, AutoReplyPrint.CP_Pos_Alignment_Left);
+
+                    byte[] bytes = print.printTwoColumn("订单编号:", "2edfjdfndjfndfdsn");
+                    AutoReplyPrint.INSTANCE.CP_Port_Write(pointer, bytes, bytes.length, 10000);
+                    SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                    byte[] bytes2 = print.printTwoColumn("下单时间:", format.format(SystemClock.currentThreadTimeMillis()));
+                    AutoReplyPrint.INSTANCE.CP_Port_Write(pointer, bytes2, bytes2.length, 10000);
+
+                    AutoReplyPrint.INSTANCE.CP_Pos_PrintText(pointer, "\n--------------------------------\n");
+                    AutoReplyPrint.INSTANCE.CP_Pos_SetMultiByteEncoding(pointer, AutoReplyPrint.CP_MultiByteEncoding_UTF8);
+                    AutoReplyPrint.INSTANCE.CP_Pos_PrintText(pointer, "客户信息：\n");
+
+                    //中号字体
+                    byte[] data = {(byte) 0x1d, (byte) 0x21, (byte) 0x01};
+                    AutoReplyPrint.INSTANCE.CP_Port_Write(pointer, data, data.length, 10000);
+
+                    AutoReplyPrint.INSTANCE.CP_Pos_SetTextBold(pointer, 1);
+
+                    AutoReplyPrint.INSTANCE.CP_Pos_PrintText(pointer, "小明 ");
+                    AutoReplyPrint.INSTANCE.CP_Pos_SetTextBold(pointer, 0);
+                    AutoReplyPrint.INSTANCE.CP_Pos_PrintText(pointer, "177****8718");
+
+                    AutoReplyPrint.INSTANCE.CP_Pos_SetTextScale(pointer, 0, 0);
+                    AutoReplyPrint.INSTANCE.CP_Pos_FeedLine(pointer, 2);
+                    AutoReplyPrint.INSTANCE.CP_Pos_PrintText(pointer, "上海市杨浦区政立路485号哔哩哔哩大厦5楼520室");
+                    AutoReplyPrint.INSTANCE.CP_Pos_FeedLine(pointer, 1);
+
+                    AutoReplyPrint.INSTANCE.CP_Pos_PrintText(pointer, "预约时间：\n");
+                    AutoReplyPrint.INSTANCE.CP_Pos_PrintText(pointer, "2020-04-23 18:00-18:50");
+                    AutoReplyPrint.INSTANCE.CP_Pos_PrintText(pointer, "\n--------------------------------\n");
+
+                    AutoReplyPrint.INSTANCE.CP_Pos_PrintText(pointer, "备注：");
+                    AutoReplyPrint.INSTANCE.CP_Pos_PrintText(pointer, "微微辣，可以微麻，多加点香菜，筷子两双，谢谢！");
+                    AutoReplyPrint.INSTANCE.CP_Pos_PrintText(pointer, "\n--------------------------------\n");
+
+                    AutoReplyPrint.INSTANCE.CP_Pos_SetMultiByteEncoding(pointer, AutoReplyPrint.CP_MultiByteEncoding_GBK);
+                    byte[] bytes3 = print.printThreeColumn("商品", "数量", "小计");
+                    AutoReplyPrint.INSTANCE.CP_Port_Write(pointer, bytes3, bytes3.length, 10000);
+                    AutoReplyPrint.INSTANCE.CP_Pos_FeedLine(pointer, 1);
+
+                    byte[] bytes4 = print.printThreeColumn("冬瓜炖冬瓜炖排骨排", " x9", "8.00");
+                    AutoReplyPrint.INSTANCE.CP_Port_Write(pointer, bytes4, bytes4.length, 10000);
+                    AutoReplyPrint.INSTANCE.CP_Pos_FeedLine(pointer, 1);
+                    byte[] bytes5 = print.printThreeColumn("冬瓜炖冬瓜炖排骨排骨", " x999", "8.00");
+                    AutoReplyPrint.INSTANCE.CP_Port_Write(pointer, bytes5, bytes5.length, 10000);
+                    AutoReplyPrint.INSTANCE.CP_Pos_FeedLine(pointer, 1);
+                    byte[] bytes6 = print.printThreeColumn("冬瓜炖冬瓜炖排骨排骨:", " x999", "8.00");
+                    AutoReplyPrint.INSTANCE.CP_Port_Write(pointer, bytes6, bytes6.length, 10000);
+                    AutoReplyPrint.INSTANCE.CP_Pos_FeedLine(pointer, 1);
+                    byte[] bytes7 = print.printThreeColumn("冬瓜冬瓜炖排骨冬瓜炖排骨炖排骨:", " x9999899.9", "1008.00");
+                    AutoReplyPrint.INSTANCE.CP_Port_Write(pointer, bytes7, bytes7.length, 10000);
+                    AutoReplyPrint.INSTANCE.CP_Pos_FeedLine(pointer, 1);
+                    byte[] bytes8 = print.printThreeColumn("冬瓜冬瓜炖排骨冬瓜炖排骨冬瓜炖排骨炖排骨:", " x999.99", "1008.00");
+                    AutoReplyPrint.INSTANCE.CP_Port_Write(pointer, bytes8, bytes8.length, 10000);
+                    AutoReplyPrint.INSTANCE.CP_Pos_FeedLine(pointer, 1);
+                    byte[] bytes9 = print.printThreeColumn("冬瓜炖排冬瓜炖排骨冬瓜炖排骨冬瓜炖骨:", " x999.99", "10080.00");
+                    AutoReplyPrint.INSTANCE.CP_Port_Write(pointer, bytes9, bytes9.length, 10000);
+                    AutoReplyPrint.INSTANCE.CP_Pos_FeedLine(pointer, 1);
+                    byte[] bytes0 = print.printThreeColumn("冬瓜冬瓜炖排骨冬瓜炖排骨冬瓜炖排骨冬瓜炖排骨冬瓜炖排骨冬瓜炖排骨炖排骨:", " x99899.99", "100980.00");
+                    AutoReplyPrint.INSTANCE.CP_Port_Write(pointer, bytes0, bytes0.length, 10000);
+                    AutoReplyPrint.INSTANCE.CP_Pos_FeedLine(pointer, 1);
+                    byte[] bytes11 = print.printThreeColumn("冬瓜炖冬瓜炖排骨冬瓜炖排骨冬瓜炖排骨冬瓜炖排骨排骨:", "x10000", "998.00");
+                    AutoReplyPrint.INSTANCE.CP_Port_Write(pointer, bytes11, bytes11.length, 10000);
+                    AutoReplyPrint.INSTANCE.CP_Pos_FeedLine(pointer, 1);
+
+                    AutoReplyPrint.INSTANCE.CP_Pos_SetMultiByteEncoding(pointer, AutoReplyPrint.CP_MultiByteEncoding_UTF8);
+                    AutoReplyPrint.INSTANCE.CP_Pos_SetAlignment(pointer, AutoReplyPrint.CP_Pos_Alignment_Right);
+                    AutoReplyPrint.INSTANCE.CP_Pos_PrintText(pointer, "总计：8889:99");
+
+                    AutoReplyPrint.INSTANCE.CP_Pos_PrintText(pointer, "\n--------------------------------\n");
+                    AutoReplyPrint.INSTANCE.CP_Pos_SetAlignment(pointer, AutoReplyPrint.CP_Pos_Alignment_HCenter);
+
+                    AutoReplyPrint.INSTANCE.CP_Page_DrawQRCode(pointer, 0, 0, 8, AutoReplyPrint.CP_QRCodeECC_H, "http://weixin.qq.com");
+
+                    AutoReplyPrint.INSTANCE.CP_Pos_PrintText(pointer, "关注“美团外卖”公众号，获取更多优惠信息");
+
+                    AutoReplyPrint.INSTANCE.CP_Pos_FeedLine(pointer, 2);
+                    AutoReplyPrint.INSTANCE.CP_Pos_PrintText(pointer, "商家电话：400-820-8820");
+
+                    AutoReplyPrint.INSTANCE.CP_Pos_FeedLine(pointer, 4);
+                } catch (Exception e) {
+                }
+            }
+        }).start();
+    }
+
+    public static String isConnect() {
         String status = "";
         try {
             byte[] statusData = HPRTPrinterHelper.GetRealTimeStatus((byte) HPRTPrinterHelper.PRINTER_REAL_TIME_STATUS_ITEM_PRINTER);
@@ -695,7 +838,6 @@ public class PrintUtil {
 
         } catch (Exception e) {
         }
-
-        return "18".equals(status) ? true : false;
+        return status;
     }
 }

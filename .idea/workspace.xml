@@ -10,25 +10,16 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5bb500c-d27c-4504-836a-0bc358a89ed1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/libs/android_print_sdk .jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/SelectPrinterActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/model/SelectPrinterAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_back.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_back_white.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_select_printer.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_select_printer.xml" afterDir="false" />
+    <list default="true" id="c5bb500c-d27c-4504-836a-0bc358a89ed1" name="Default Changelist" comment="1 新增选择打印机功能&#10;2 新增爱印打印机支持&#10;2 优化打印排版格式">
+      <change afterPath="$PROJECT_DIR$/app/libs/autoreplyprint.aar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_CymChad_BaseRecyclerViewAdapterHelper_2_9_50_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_CymChad_BaseRecyclerViewAdapterHelper_2_9_50_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/MyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/MyApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/model/BluetoothDeviceBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/model/BluetoothDeviceBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/SelectPrinterActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/SelectPrinterActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/model/SelectPrinterAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/model/SelectPrinterAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/utils/PrintUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/utils/PrintUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <ignored path="../../App/App.iml" />
@@ -44,7 +35,7 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="13e38c510606" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="4af5f2b1" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -94,67 +85,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/MainActivity.java">
+        <entry file="file://$PROJECT_DIR$/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="548">
-              <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-          <provider editor-type-id="android-manifest" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="19" column="68" selection-start-line="19" selection-start-column="68" selection-end-line="19" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/SelectPrinterActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="127" column="17" selection-start-line="127" selection-start-column="17" selection-end-line="127" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#5028#5050#0" expanded="true" />
-                <element signature="e#5958#6007#0" expanded="true" />
-                <element signature="e#6491#6518#0" expanded="true" />
-                <element signature="e#7201#7237#0" expanded="true" />
-                <element signature="e#7601#7623#0" expanded="true" />
-                <element signature="e#7926#7953#0" expanded="true" />
-                <element signature="e#8049#8087#0" expanded="true" />
-                <element signature="e#8463#8490#0" expanded="true" />
-                <element signature="e#8586#8623#0" expanded="true" />
-                <element signature="e#8755#8782#0" expanded="true" />
-                <element signature="e#8878#8915#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/model/SelectPrinterAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="780">
-              <caret line="39" column="24" lean-forward="true" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/model/BluetoothDeviceBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+            <state relative-caret-position="315">
+              <caret line="45" column="55" selection-start-line="45" selection-start-column="55" selection-end-line="45" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -162,47 +96,109 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+            <state relative-caret-position="140">
+              <caret line="7" column="60" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/utils/PrintUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="544" column="42" lean-forward="true" selection-start-line="544" selection-start-column="42" selection-end-line="544" selection-end-column="42" />
+            <state relative-caret-position="-4352">
+              <caret line="576" column="66" lean-forward="true" selection-start-line="576" selection-start-column="66" selection-end-line="576" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#12195#12227#0" expanded="true" />
-                <element signature="e#12479#12480#0" expanded="true" />
-                <element signature="e#12544#12545#0" expanded="true" />
-                <element signature="e#18080#18112#0" expanded="true" />
-                <element signature="e#18336#18337#0" expanded="true" />
-                <element signature="e#18411#18412#0" expanded="true" />
+                <element signature="e#12376#12427#0" expanded="true" />
+                <element signature="e#12519#12571#0" expanded="true" />
+                <element signature="e#12795#12796#0" expanded="true" />
+                <element signature="e#12870#12871#0" expanded="true" />
+                <element signature="e#18536#18587#0" expanded="true" />
+                <element signature="e#18679#18731#0" expanded="true" />
+                <element signature="e#18955#18956#0" expanded="true" />
+                <element signature="e#19030#19031#0" expanded="true" />
+                <element signature="e#25253#25304#0" expanded="true" />
+                <element signature="e#25396#25448#0" expanded="true" />
+                <element signature="e#25672#25673#0" expanded="true" />
+                <element signature="e#25747#25748#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_select_printer.xml">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/SelectPrinterActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+            <state relative-caret-position="508">
+              <caret line="310" column="31" lean-forward="true" selection-start-line="310" selection-start-column="31" selection-end-line="310" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#7018#7040#0" expanded="true" />
+                <element signature="e#11001#11028#0" expanded="true" />
+                <element signature="e#12086#12113#0" expanded="true" />
+                <element signature="e#12210#12247#0" expanded="true" />
+                <element signature="e#12703#12740#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/model/SelectPrinterAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="428">
+              <caret line="87" column="44" lean-forward="true" selection-start-line="87" selection-start-column="44" selection-end-line="87" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="468">
+              <caret line="58" column="27" lean-forward="true" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2233#2271#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/MyApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="15" column="61" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_dialog_progress.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="7" column="54" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
             </state>
           </provider>
           <provider editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/model/OrderBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_dialog_progress_back.xml">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -217,17 +213,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>flSingIn</find>
-      <find>setDirction</find>
-      <find>direction</find>
-      <find>LEFT_BOTTOM</find>
-      <find>params.setMargins(left + offsetX, bottom + offsetY, 0, 0);</find>
-      <find>RIGHT_TOP</find>
-      <find>RIGHT_BOTTOM</find>
-      <find>LEFT_TOP</find>
-      <find>map</find>
-      <find>HashMap</find>
-      <find>OnClickCallback</find>
       <find>CIRCULAR</find>
       <find>OVAL</find>
       <find>RECTANGULAR</find>
@@ -247,6 +232,17 @@
       <find>fin</find>
       <find>finish</find>
       <find>mAdapter</find>
+      <find>ic_back</find>
+      <find>RecyclerView</find>
+      <find>bt_connecting</find>
+      <find>autoreplyprint</find>
+      <find>initA</find>
+      <find>Handler_Connect_Success</find>
+      <find>http://weixin.qq.com</find>
+      <find>oldFKPinter =</find>
+      <find>oldAYPinter</find>
+      <find>oldFKPinter</find>
+      <find>handler</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -280,19 +276,20 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/MaskHintActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/utils/Utility.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/BluetoothDeviceBean.java" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/Constants.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/utils/ToastUtil.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/MyApplication.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_select_printer.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/model/BluetoothDeviceBean.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/SelectPrinterAdapter.java" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/SelectPrinterActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/model/SelectPrinterAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/utils/PrintUtil.java" />
       </list>
     </option>
@@ -310,6 +307,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -389,55 +387,13 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="e" type="462c0819:PsiDirectoryNode" />
               <item name="printtextdemo" type="462c0819:PsiDirectoryNode" />
-              <item name="activity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PrintDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PrintDemo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="e" type="462c0819:PsiDirectoryNode" />
-              <item name="printtextdemo" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PrintDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PrintDemo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="e" type="462c0819:PsiDirectoryNode" />
-              <item name="printtextdemo" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PrintDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PrintDemo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PrintDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PrintDemo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="values" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -446,11 +402,11 @@
     <property name="DEBUGGABLE_PROCESS" value="com.e.printtextdemo" />
     <property name="DEBUGGER_ID" value="Auto" />
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="13e38c510606" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-04-29T09:01:52.283Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-04-30T09:39:48.061Z" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/libs" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -466,8 +422,8 @@
       <recent name="com.e.printtextdemo" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\project\PrintDemo\app\src\main\res\drawable-xhdpi" />
       <recent name="C:\project\PrintDemo\app\libs" />
+      <recent name="C:\project\PrintDemo\app\src\main\res\drawable-xhdpi" />
       <recent name="C:\project\PrintDemo\app\src\main\res\layout" />
       <recent name="C:\project\PrintDemo\app\info" />
       <recent name="C:\project\PrintDemo\app\src\main\res\drawable-xxhdpi" />
@@ -631,7 +587,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578107896495</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="1 新增选择打印机功能&#10;2 新增爱印打印机支持&#10;2 优化打印排版格式">
+      <created>1588156036972</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1588156036972</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -639,7 +602,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.21268657" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.19936034" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -651,8 +614,8 @@
       <window_info anchor="bottom" id="TODO" order="1" />
       <window_info anchor="bottom" id="Terminal" order="2" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Build" order="4" weight="0.2516704" />
-      <window_info anchor="bottom" id="Android Profiler" order="5" />
+      <window_info anchor="bottom" id="Build" order="4" weight="0.20601337" />
+      <window_info anchor="bottom" id="Android Profiler" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="6" weight="0.5044543" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.32962137" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.32962137" />
@@ -665,25 +628,56 @@
       <window_info anchor="right" id="Preview" order="5" weight="0.32995737" />
     </layout>
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="添加忽略文件" />
     <MESSAGE value="删除主Moudel" />
     <MESSAGE value="重新提交主Moudel" />
     <MESSAGE value="新增蒙版提示页面" />
     <MESSAGE value="更换效果图片img02" />
-    <option name="LAST_COMMIT_MESSAGE" value="更换效果图片img02" />
+    <MESSAGE value="1 新增选择打印机功能&#10;2 新增爱印打印机支持&#10;2 优化打印排版格式" />
+    <option name="LAST_COMMIT_MESSAGE" value="1 新增选择打印机功能&#10;2 新增爱印打印机支持&#10;2 优化打印排版格式" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/utils/PrintUtil.java</url>
-          <line>479</line>
-          <properties />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Remote">
         <watch expression="orderBean[0].getTime()" />
@@ -692,56 +686,24 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/main_mask_hint_1.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/proguard-rules.pro">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.linwg1988/lcardview/1.4.2/16b2be5ec558a252c0267c5d88bd25c5ee459edc/lcardview-1.4.2-sources.jar!/www/linwg/org/lib/LCardView.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/connect_printer.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_select_shop.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/border_white_color_rounded_radius10_bg.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/main_mask_hint_6.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
           <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/main_mask_hint_3.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-29/android/graphics/Canvas.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -755,12 +717,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/main_mask_hint_4.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/header.jpeg" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/header.png">
@@ -779,12 +741,12 @@
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/main_mask_hint_5.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/info/img001.png">
       <provider selected="true" editor-type-id="images" />
@@ -796,12 +758,12 @@
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_mask_hint.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="37" column="42" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/MaskHintActivity.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -903,34 +865,7 @@
     <entry file="file://$PROJECT_DIR$/app/info/img02.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="740">
-          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="4" lean-forward="true" selection-start-line="2" selection-end-line="5" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/Constants.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_select_printer.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -938,13 +873,6 @@
         </state>
       </provider>
       <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/utils/ToastUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -954,17 +882,19 @@
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/MyApplication.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/BluetoothDeviceBean.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+        <state relative-caret-position="380">
+          <caret line="19" column="68" selection-start-line="19" selection-start-column="68" selection-end-line="19" selection-end-column="68" />
         </state>
       </provider>
+      <provider editor-type-id="android-manifest" />
     </entry>
-    <entry file="jar://$PROJECT_DIR$/app/libs/android_print_sdk .jar!/com/android_print_sdk/bluetooth/BluetoothPrinter.class">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/model/BluetoothDeviceBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="623" column="43" selection-start-line="623" selection-start-column="36" selection-end-line="623" selection-end-column="43" />
+        <state relative-caret-position="200">
+          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -975,96 +905,141 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="68" selection-start-line="19" selection-start-column="68" selection-end-line="19" selection-end-column="68" />
+        <state relative-caret-position="360">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_select_printer.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+        <state relative-caret-position="219">
+          <caret line="29" column="40" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="42" />
         </state>
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
+    <entry file="jar://$PROJECT_DIR$/app/libs/android_print_sdk .jar!/com/android_print_sdk/bluetooth/BluetoothPrinter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="623" column="43" selection-start-line="623" selection-start-column="36" selection-end-line="623" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_back.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/utils/ToastUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="15" column="61" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_dialog_progress.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="54" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_dialog_progress_back.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="45" column="55" selection-start-line="45" selection-start-column="55" selection-end-line="45" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/model/SelectPrinterAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="87" column="44" lean-forward="true" selection-start-line="87" selection-start-column="44" selection-end-line="87" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+        <state relative-caret-position="140">
+          <caret line="7" column="60" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/BluetoothDeviceBean.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/MyApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/model/BluetoothDeviceBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+        <state relative-caret-position="290">
+          <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/SelectPrinterActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="127" column="17" selection-start-line="127" selection-start-column="17" selection-end-line="127" selection-end-column="17" />
+        <state relative-caret-position="508">
+          <caret line="310" column="31" lean-forward="true" selection-start-line="310" selection-start-column="31" selection-end-line="310" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5028#5050#0" expanded="true" />
-            <element signature="e#5958#6007#0" expanded="true" />
-            <element signature="e#6491#6518#0" expanded="true" />
-            <element signature="e#7201#7237#0" expanded="true" />
-            <element signature="e#7601#7623#0" expanded="true" />
-            <element signature="e#7926#7953#0" expanded="true" />
-            <element signature="e#8049#8087#0" expanded="true" />
-            <element signature="e#8463#8490#0" expanded="true" />
-            <element signature="e#8586#8623#0" expanded="true" />
-            <element signature="e#8755#8782#0" expanded="true" />
-            <element signature="e#8878#8915#0" expanded="true" />
+            <element signature="e#7018#7040#0" expanded="true" />
+            <element signature="e#11001#11028#0" expanded="true" />
+            <element signature="e#12086#12113#0" expanded="true" />
+            <element signature="e#12210#12247#0" expanded="true" />
+            <element signature="e#12703#12740#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+        <state relative-caret-position="468">
+          <caret line="58" column="27" lean-forward="true" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2233#2271#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/utils/PrintUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="544" column="42" lean-forward="true" selection-start-line="544" selection-start-column="42" selection-end-line="544" selection-end-column="42" />
+        <state relative-caret-position="-4352">
+          <caret line="576" column="66" lean-forward="true" selection-start-line="576" selection-start-column="66" selection-end-line="576" selection-end-column="66" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#12195#12227#0" expanded="true" />
-            <element signature="e#12479#12480#0" expanded="true" />
-            <element signature="e#12544#12545#0" expanded="true" />
-            <element signature="e#18080#18112#0" expanded="true" />
-            <element signature="e#18336#18337#0" expanded="true" />
-            <element signature="e#18411#18412#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/model/SelectPrinterAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="39" column="24" lean-forward="true" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#12376#12427#0" expanded="true" />
+            <element signature="e#12519#12571#0" expanded="true" />
+            <element signature="e#12795#12796#0" expanded="true" />
+            <element signature="e#12870#12871#0" expanded="true" />
+            <element signature="e#18536#18587#0" expanded="true" />
+            <element signature="e#18679#18731#0" expanded="true" />
+            <element signature="e#18955#18956#0" expanded="true" />
+            <element signature="e#19030#19031#0" expanded="true" />
+            <element signature="e#25253#25304#0" expanded="true" />
+            <element signature="e#25396#25448#0" expanded="true" />
+            <element signature="e#25672#25673#0" expanded="true" />
+            <element signature="e#25747#25748#0" expanded="true" />
           </folding>
         </state>
       </provider>
