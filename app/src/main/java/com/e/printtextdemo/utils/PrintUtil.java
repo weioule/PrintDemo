@@ -451,7 +451,7 @@ public class PrintUtil {
                     orderBean[0].setTime(1577359134114l);
                     orderBean[0].setCode("008985956590840973");
                     orderBean[0].setName("小明");
-                    orderBean[0].setPhone("17721358718");
+                    orderBean[0].setPhone("177****8718");
                     orderBean[0].setAddress("上海市杨浦区政立路485号哔哩哔哩大厦5楼");
                     orderBean[0].setExpectedReach("18:50");
                     orderBean[0].setRemark("微微辣，可以微麻，多加一点香菜，谢谢！");
@@ -552,7 +552,7 @@ public class PrintUtil {
                     print.printLine();
 
                     print.setAlignCmd(ALIGN_CENTER);
-                    print.printHY("商家电话:" + orderBean[0].getBusinessPhone());
+                    print.printHY("商家电话：" + orderBean[0].getBusinessPhone());
                     print.printLine();
 
                     Print.PrintAndFeed(80);
@@ -629,7 +629,7 @@ public class PrintUtil {
                     //取消加粗
                     byte cmd3[] = new byte[]{27, 69, 0};
                     mPrinter.printByteData(cmd3);
-                    mPrinter.printText("17721358718\n");
+                    mPrinter.printText("177****8718\n");
 
                     //24点阵 (默认字体大小)
                     byte cmd1[] = new byte[]{27, (byte) 128, 0};
@@ -815,10 +815,11 @@ public class PrintUtil {
 
                     AutoReplyPrint.INSTANCE.CP_Page_DrawQRCode(pointer, 0, 0, 8, AutoReplyPrint.CP_QRCodeECC_H, "http://weixin.qq.com");
 
+                    AutoReplyPrint.INSTANCE.CP_Pos_FeedLine(pointer, 1);
                     AutoReplyPrint.INSTANCE.CP_Pos_PrintText(pointer, "关注“美团外卖”公众号，获取更多优惠信息");
 
                     AutoReplyPrint.INSTANCE.CP_Pos_FeedLine(pointer, 2);
-                    AutoReplyPrint.INSTANCE.CP_Pos_PrintText(pointer, "商家电话：400-820-8820");
+                    AutoReplyPrint.INSTANCE.CP_Pos_PrintText(pointer, "商家电话：800-820-8820");
 
                     AutoReplyPrint.INSTANCE.CP_Pos_FeedLine(pointer, 4);
                 } catch (Exception e) {

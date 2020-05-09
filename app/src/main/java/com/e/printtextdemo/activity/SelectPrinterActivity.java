@@ -110,7 +110,7 @@ public class SelectPrinterActivity extends AppCompatActivity implements View.OnC
                 if (TextUtils.isEmpty(address)) {
                     MyApplication.showToast("请选择打印设备");
                 } else if (address.equals(MyApplication.currentPrinAddress)) {
-                    finish();
+                    tofinish();
                 } else {
                     if (name.startsWith("M22_BT_")) {
                         initAYPrinter(address, name);
