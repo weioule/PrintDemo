@@ -67,4 +67,6 @@ dependencies {
     implementation files('libs/android_print_sdk .jar')
     //复坤SDK
     api(name: 'autoreplyprint', ext: 'aar')
+
+    implementation 'cn.bingoogolapple:bga-qrcode-zxing:1.3.7'
 }

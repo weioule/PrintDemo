@@ -22,7 +22,7 @@ public class MyApplication extends Application {
     public static Context appContext;
     private Activity activity;
 
-    public static int currentPrintType;//打印机类型：1 汉印   2 爱印
+    public static int currentPrintType;//打印机类型：1 汉印   2 爱印   3 复坤
     public static String currentPrinAddress;//打印机mac地址
 
     @Override

@@ -1,9 +1,16 @@
 package com.e.printtextdemo.utils;
 
 import android.app.Activity;
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Matrix;
+import android.graphics.Paint;
+import android.graphics.PixelFormat;
 import android.graphics.Rect;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.SystemClock;
 import android.text.TextUtils;
 
@@ -16,14 +23,17 @@ import com.e.printtextdemo.activity.SelectPrinterActivity;
 import com.e.printtextdemo.model.FoodBean;
 import com.e.printtextdemo.model.OrderBean;
 import com.github.promeg.pinyinhelper.Pinyin;
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.EncodeHintType;
+import com.google.zxing.WriterException;
+import com.google.zxing.common.BitMatrix;
+import com.google.zxing.qrcode.QRCodeWriter;
 import com.sun.jna.Pointer;
 
-import java.io.IOException;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Hashtable;
 import java.util.List;
 
 import HPRTAndroidSDK.HPRTPrinterHelper;
@@ -49,9 +59,6 @@ public class PrintUtil {
     public static final int ALIGN_LEFT = 0;     // 靠左
     public static final int ALIGN_CENTER = 1;   // 居中
     public static final int ALIGN_RIGHT = 2;    // 靠右
-
-    private OutputStreamWriter mWriter = null;
-    private OutputStream mOutputStream = null;
 
     public final static int WIDTH_PIXEL = 384;
     public final static int IMAGE_SIZE = 320;
@@ -199,12 +206,6 @@ public class PrintUtil {
         }
     }
 
-    public void printRawBytes(byte[] bytes) throws IOException {
-        mOutputStream.write(bytes);
-        mOutputStream.flush();
-    }
-
-
     public byte[] getGbk(String stText) throws UnsupportedEncodingException {
         byte[] returnText = stText.getBytes("GBK"); // 必须放在try内才可以
         return returnText;
@@ -317,17 +318,11 @@ public class PrintUtil {
         printHY("--------------------------------");
     }
 
-    public void printBitmap(Bitmap bmp) throws IOException {
-        bmp = compressPic(bmp);
-        byte[] bmpByteArray = draw2PxPoint(bmp);
-        printRawBytes(bmpByteArray);
-    }
-
     /*************************************************************************
      * 假设一个360*360的图片，分辨率设为24, 共分15行打印 每一行,是一个 360 * 24 的点阵,y轴有24个点,存储在3个byte里面。
      * 即每个byte存储8个像素点信息。因为只有黑白两色，所以对应为1的位是黑色，对应为0的位是白色
      **************************************************************************/
-    private byte[] draw2PxPoint(Bitmap bmp) {
+    private static byte[] draw2PxPoint(Bitmap bmp) {
         //先设置一个足够大的size，最后在用数组拷贝复制到一个精确大小的byte数组中
         int size = bmp.getWidth() * bmp.getHeight() / 8 + 1000;
         byte[] tmp = new byte[size];
@@ -374,7 +369,7 @@ public class PrintUtil {
      * @param bit 位图
      * @return
      */
-    private byte px2Byte(int x, int y, Bitmap bit) {
+    private static byte px2Byte(int x, int y, Bitmap bit) {
         if (x < bit.getWidth() && y < bit.getHeight()) {
             byte b;
             int pixel = bit.getPixel(x, y);
@@ -395,7 +390,7 @@ public class PrintUtil {
     /**
      * 图片灰度的转化
      */
-    private int RGB2Gray(int r, int g, int b) {
+    private static int RGB2Gray(int r, int g, int b) {
         int gray = (int) (0.29900 * r + 0.58700 * g + 0.11400 * b); // 灰度转化公式
         return gray;
     }
@@ -405,7 +400,7 @@ public class PrintUtil {
      *
      * @param bitmapOrg
      */
-    private Bitmap compressPic(Bitmap bitmapOrg) {
+    private static Bitmap compressPic(Bitmap bitmapOrg) {
         // 获取这个图片的宽和高
         int width = bitmapOrg.getWidth();
         int height = bitmapOrg.getHeight();
@@ -449,7 +444,7 @@ public class PrintUtil {
                 if (null == data) {
                     orderBean[0] = new OrderBean();
                     orderBean[0].setTime(1577359134114l);
-                    orderBean[0].setCode("008985956590840973");
+                    orderBean[0].setCode("20211212155816000001");
                     orderBean[0].setName("小明");
                     orderBean[0].setPhone("177****8718");
                     orderBean[0].setAddress("上海市杨浦区政立路485号哔哩哔哩大厦5楼");
@@ -477,9 +472,17 @@ public class PrintUtil {
                     print.setFontBoldCmd(FONT_BOLD);
                     print.printHY("美团外卖");
                     print.printLine();
-                    print.setAlignCmd(ALIGN_LEFT);
                     print.printLine();
 
+                    Bitmap bitmap = drawableToBitmap(activity.getResources().getDrawable(R.drawable.print_header));
+                    //调节图片大小
+                    bitmap = getBitmap(activity, bitmap);
+                    //转换成字节数组
+                    byte[] bmpByteArray = draw2PxPoint(bitmap);
+                    Print.WriteData(bmpByteArray);
+
+                    print.printLine();
+                    print.setAlignCmd(ALIGN_LEFT);
                     print.setFontSizeCmd(FONT_NORMAL);
                     print.setFontBoldCmd(FONT_BOLD_CANCEL);
                     SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -551,7 +554,21 @@ public class PrintUtil {
                     print.printDashLine();
                     print.printLine();
 
+                    //参数1 bcData：二维码内容
+                    //参数2 sizeOfModule：二维码大小，范围 1-16
+                    //参数3 errorLevel：纠错等级( 48=7%、49=15%、50=25%、51=30% )
+                    //参数4 justification：对齐方式( 0=左对齐、1=居中、2=右对齐 )
+//                    Print.PrintQRCode("http://weixin.qq.com", 6, 50, 1);   该方法打印不了二维码，故使用下面的图片打印方式
+
+                    //生成二维码
+                    Bitmap codeBitmap = createQRCodeBitmap("http://weixin.qq.com", 150, 150, "UTF-8", "H", "0", Color.BLACK, Color.WHITE);
+                    //转换成字节数组
+                    byte[] array = draw2PxPoint(codeBitmap);
+                    //打印
+                    Print.WriteData(array);
+
                     print.setAlignCmd(ALIGN_CENTER);
+                    print.printHY("关注“美团外卖”公众号，获取更多优惠信息\n\n");
                     print.printHY("商家电话：" + orderBean[0].getBusinessPhone());
                     print.printLine();
 
@@ -598,6 +615,13 @@ public class PrintUtil {
                     mPrinter.setPrintModel(true, false, false, false);
                     mPrinter.setCharacterMultiple(1, 1);
                     mPrinter.printText("美团外卖\n");
+                    mPrinter.printText("\n");
+
+                    //图片打印
+                    Bitmap bitmap = drawableToBitmap(activity.getResources().getDrawable(R.drawable.print_header));
+                    //大小调节可把bitmap设置宽高后再打印
+                    byte[] bmpByteArray = draw2PxPoint(bitmap);
+                    mPrinter.printByteData(bmpByteArray);
 
                     mPrinter.setCharacterMultiple(0, 0);
                     mPrinter.setPrintModel(false, false, false, false);
@@ -605,7 +629,7 @@ public class PrintUtil {
                     SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
                     mPrinter.printText("\n");
-                    mPrinter.printByteData(print.printTwoColumn("订单编号:", "2edfjdfndjfndfdsn\n"));
+                    mPrinter.printByteData(print.printTwoColumn("订单编号:", "20211212155816000001\n"));
                     mPrinter.printByteData(print.printTwoColumn("下单时间:", format.format(SystemClock.currentThreadTimeMillis()) + "\n"));
 
                     mPrinter.printText("--------------------------------\n");
@@ -734,16 +758,22 @@ public class PrintUtil {
                     AutoReplyPrint.INSTANCE.CP_Pos_SetAlignment(pointer, AutoReplyPrint.CP_Pos_Alignment_HCenter);
                     AutoReplyPrint.INSTANCE.CP_Pos_SetMultiByteEncoding(pointer, AutoReplyPrint.CP_MultiByteEncoding_UTF8);
                     AutoReplyPrint.INSTANCE.CP_Pos_PrintText(pointer, "美团外卖");
-                    AutoReplyPrint.INSTANCE.CP_Pos_FeedLine(pointer, 1);
-
+                    AutoReplyPrint.INSTANCE.CP_Pos_FeedLine(pointer, 2);
                     AutoReplyPrint.INSTANCE.CP_Pos_SetTextBold(pointer, 0);
                     AutoReplyPrint.INSTANCE.CP_Pos_SetTextScale(pointer, 0, 0);
 
-                    AutoReplyPrint.INSTANCE.CP_Pos_FeedLine(pointer, 2);
+                    //图片打印
+                    Bitmap bitmap = ((BitmapDrawable) activity.getResources().getDrawable(R.drawable.print_header)).getBitmap();
+                    // dstw与desth为图片宽高，单位是像素
+                    // 参数5为图片算法类型：0=抖动、1=黑白、2=聚焦
+                    // 参数6为压缩等级：0不压缩
+                    AutoReplyPrint.CP_Pos_PrintRasterImageFromData_Helper.PrintRasterImageFromBitmap(pointer, 160, 160, bitmap, AutoReplyPrint.CP_ImageBinarizationMethod_ErrorDiffusion, AutoReplyPrint.CP_ImageCompressionMethod_None);
+
+                    AutoReplyPrint.INSTANCE.CP_Pos_FeedLine(pointer, 1);
                     AutoReplyPrint.INSTANCE.CP_Pos_SetMultiByteEncoding(pointer, AutoReplyPrint.CP_MultiByteEncoding_GBK);
                     AutoReplyPrint.INSTANCE.CP_Pos_SetAlignment(pointer, AutoReplyPrint.CP_Pos_Alignment_Left);
 
-                    byte[] bytes = print.printTwoColumn("订单编号:", "2edfjdfndjfndfdsn");
+                    byte[] bytes = print.printTwoColumn("订单编号:", "20211212155816000001");
                     AutoReplyPrint.INSTANCE.CP_Port_Write(pointer, bytes, bytes.length, 10000);
                     SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                     byte[] bytes2 = print.printTwoColumn("下单时间:", format.format(SystemClock.currentThreadTimeMillis()));
@@ -840,5 +870,121 @@ public class PrintUtil {
         } catch (Exception e) {
         }
         return status;
+    }
+
+    //调节图片大小
+    public static Bitmap getBitmap(Context context, Bitmap bitmap) {
+        int width = bitmap.getWidth();//得到的单位是dp
+        int height = bitmap.getHeight();
+        // 设置想要的大小，这里像素单位
+        int newWidth = IMAGE_SIZE;
+        int newHeight = IMAGE_SIZE;
+        // 计算缩放比例
+        float scaleWidth = (float) newWidth / Utility.dp2px(context, width);//所以需要转换为像素后再计算比例
+        float scaleHeight = (float) newHeight / Utility.dp2px(context, height);
+        // 取得想要缩放的matrix参数
+        Matrix matrix = new Matrix();
+        matrix.postScale(scaleWidth, scaleHeight);
+        // 得到新的图片
+        bitmap = Bitmap.createBitmap(bitmap, 0, 0, width, height, matrix, true);
+        return bitmap;
+    }
+
+    /**
+     * 生成简单二维码
+     *
+     * @param content                字符串内容
+     * @param width                  二维码宽度
+     * @param height                 二维码高度
+     * @param character_set          编码方式（一般使用UTF-8）
+     * @param error_correction_level 容错率 L：7% M：15% Q：25% H：35%
+     * @param margin                 空白边距（二维码与边框的空白区域）
+     * @param color_black            黑色色块
+     * @param color_white            白色色块
+     * @return BitMap
+     */
+    public static Bitmap createQRCodeBitmap(String content, int width, int height,
+                                            String character_set, String error_correction_level,
+                                            String margin, int color_black, int color_white) {
+        // 字符串内容判空
+        if (TextUtils.isEmpty(content)) {
+            return null;
+        }
+        // 宽和高>=0
+        if (width < 0 || height < 0) {
+            return null;
+        }
+        try {
+            /** 1.设置二维码相关配置 */
+            Hashtable<EncodeHintType, String> hints = new Hashtable<>();
+            // 字符转码格式设置
+            if (!TextUtils.isEmpty(character_set)) {
+                hints.put(EncodeHintType.CHARACTER_SET, character_set);
+            }
+            // 容错率设置
+            if (!TextUtils.isEmpty(error_correction_level)) {
+                hints.put(EncodeHintType.ERROR_CORRECTION, error_correction_level);
+            }
+            // 空白边距设置
+            if (!TextUtils.isEmpty(margin)) {
+                hints.put(EncodeHintType.MARGIN, margin);
+            }
+            /** 2.将配置参数传入到QRCodeWriter的encode方法生成BitMatrix(位矩阵)对象 */
+            BitMatrix bitMatrix = new QRCodeWriter().encode(content, BarcodeFormat.QR_CODE, width, height, hints);
+
+            /** 3.创建像素数组,并根据BitMatrix(位矩阵)对象为数组元素赋颜色值 */
+            int[] pixels = new int[width * height];
+            for (int y = 0; y < height; y++) {
+                for (int x = 0; x < width; x++) {
+                    //bitMatrix.get(x,y)方法返回true是黑色色块，false是白色色块
+                    if (bitMatrix.get(x, y)) {
+                        pixels[y * width + x] = color_black;//黑色色块像素设置
+                    } else {
+                        pixels[y * width + x] = color_white;// 白色色块像素设置
+                    }
+                }
+            }
+            /** 4.创建Bitmap对象,根据像素数组设置Bitmap每个像素点的颜色值,并返回Bitmap对象 */
+            Bitmap bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+            bitmap.setPixels(pixels, 0, width, 0, 0, width, height);
+            return bitmap;
+        } catch (WriterException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    //图片合成
+    public static Bitmap synthesisImage(Bitmap bg, Bitmap icon, int left) {
+        Bitmap b2 = icon;
+        Paint paint = new Paint();
+        Canvas canvas = new Canvas(bg);
+        int b1w = bg.getWidth();
+        int b1h = bg.getHeight();
+        int b2w = b2.getWidth();
+        int b2h = b2.getHeight();
+        int bx = (b1w - b2w) / 2;
+        int by = (b1h - b2h) / 2;
+        canvas.drawBitmap(b2, left, by, paint);
+        //叠加新图b2 并且居中
+//        canvas.save(Canvas.ALL_SAVE_FLAG);
+        canvas.save();
+        canvas.restore();
+        return bg;
+    }
+
+    /**
+     * Drawable转换成一个Bitmap
+     *
+     * @param drawable drawable对象
+     * @return
+     */
+    public static final Bitmap drawableToBitmap(Drawable drawable) {
+        Bitmap bitmap = Bitmap.createBitmap(drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight(),
+                drawable.getOpacity() != PixelFormat.OPAQUE ? Bitmap.Config.ARGB_8888 : Bitmap.Config.RGB_565);
+        Canvas canvas = new Canvas(bitmap);
+        drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
+        drawable.draw(canvas);
+        return bitmap;
     }
 }
