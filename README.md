@@ -6,9 +6,7 @@
 <br>
 先看一下效果图：
 
-![image](https://github.com/weioule/PrintDemo/blob/master/app/info/img03.JPG)&nbsp;&nbsp;
-![image](https://github.com/weioule/PrintDemo/blob/master/app/info/img04.JPG)&nbsp;&nbsp;
-![image](https://github.com/weioule/PrintDemo/blob/master/app/info/img05.JPG)
+![image](https://github.com/weioule/PrintDemo/blob/master/app/info/img04.JPG)
 
 demo里主要是使用汉印打印机进行蓝牙小票打印，它还支持WiFi打印，USB打印和串口打印，SDK对接的话去汉印官网下载相应的zip包，里面有PDF文档和代码案例，文档上功能还是比较多的，比如与蓝牙进行关联以及各种状态获取以及各种属性设置等，项目里面我放了一份PDF的文档，就在info文件夹下。
 
