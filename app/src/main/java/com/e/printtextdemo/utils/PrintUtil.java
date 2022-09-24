@@ -63,6 +63,7 @@ public class PrintUtil {
     public final static int WIDTH_PIXEL = 384;
     public final static int IMAGE_SIZE = 320;
     public final static int LEFT_MAX_SIZE = 240;
+    private int fontSize;//字体类型
 
     /**
      * 打印换行
@@ -114,6 +115,7 @@ public class PrintUtil {
      * @param fontSize
      */
     public void setFontSizeCmd(int fontSize) {
+        this.fontSize = fontSize;
         byte[] data = {(byte) 0x1d, (byte) 0x21, (byte) 0x0};
         if (fontSize == FONT_NORMAL) {
             data[2] = (byte) 0x00;
@@ -211,12 +213,20 @@ public class PrintUtil {
         return returnText;
     }
 
+    //这里计算打印内容的长度，如果需要处理间距，或不同大小的字体调节后，可以在这里做适配处理
     private int getStringPixLength(String str) {
         int pixLength = 0;
         char c;
         for (int i = 0; i < str.length(); i++) {
             c = str.charAt(i);
-            if (Pinyin.isChinese(c)) {
+
+            if (fontSize == FONT_BIG) {
+                if (Pinyin.isChinese(c)) {
+                    pixLength += 48;
+                } else {
+                    pixLength += 24;
+                }
+            } else if (Pinyin.isChinese(c)) {
                 pixLength += 24;
             } else {
                 pixLength += 12;
@@ -226,7 +236,10 @@ public class PrintUtil {
     }
 
     public int getOffset(String str) {
-        return WIDTH_PIXEL - getStringPixLength(str);
+        int length = WIDTH_PIXEL - getStringPixLength(str);
+        //如果长度大于纸张宽度，就右对齐打印，计算左边间距
+        if (length < 0) return WIDTH_PIXEL - Math.abs(length);
+        return length;
     }
 
     //这个排版格式是可以公用的，打印机基本都是可以打印byte数组
@@ -235,19 +248,24 @@ public class PrintUtil {
         byte[] byteBuffer = new byte[100];
         byte[] tmp;
 
+        //手动添加间距
+        left += " ";
         int pixLength = getStringPixLength(left) % WIDTH_PIXEL;
         int middleLength = getStringPixLength(middle) % WIDTH_PIXEL;
-        //这里的25是右边距的宽度
-        int leftRemaining = WIDTH_PIXEL - middleLength - 25;
+        int leftRemaining = WIDTH_PIXEL - middleLength;
 
         int offset = 0;
         //计算后需要换行
         if (pixLength > LEFT_MAX_SIZE || 0 != left.length() && pixLength == 0) {
             left += "\n";
+        } else if (leftRemaining < 0) {
+            //右侧内容长度大于纸张宽度，就右对齐打印，计算左边间距
+            offset = WIDTH_PIXEL - Math.abs(leftRemaining);
         } else if (leftRemaining < pixLength) {
-            //设置两个文案间隔25
-            offset = pixLength + 25;
-        }
+            //左间距小于左侧内容，就换行打印
+            left += "\n";
+        } else
+            offset = leftRemaining;
 
         tmp = getGbk(left);
         System.arraycopy(tmp, 0, byteBuffer, iNum, tmp.length);
@@ -272,14 +290,17 @@ public class PrintUtil {
         byte[] byteBuffer = new byte[200];
         byte[] tmp = new byte[0];
 
+        //手动添加间距
+        left += " ";
+        middle += " ";
+
         System.arraycopy(tmp, 0, byteBuffer, iNum, tmp.length);
         iNum += tmp.length;
 
         int pixLength = getStringPixLength(left) % WIDTH_PIXEL;
         int middleLength = getStringPixLength(middle) % WIDTH_PIXEL;
         int rightLength = getStringPixLength(right) % WIDTH_PIXEL;
-        //这里的25是右边距的宽度
-        int leftRemaining = WIDTH_PIXEL - middleLength - rightLength - 25;
+        int leftRemaining = WIDTH_PIXEL - middleLength - rightLength;
 
         //计算后需要换行
         if (pixLength > LEFT_MAX_SIZE || 0 != left.length() && pixLength == 0 || leftRemaining < pixLength) {
@@ -290,11 +311,23 @@ public class PrintUtil {
         System.arraycopy(tmp, 0, byteBuffer, iNum, tmp.length);
         iNum += tmp.length;
 
-        if (middle.length() + right.length() >= 12) {
-            //数量与小计的字符长度超出其默认范围，则往从右往左打印 25即当做数量与小计的间隔
+        if (leftRemaining < 0) {
+            //中间内容+右侧内容长度大于纸张宽度，将右侧内容换行打印，中间内容与头部“数量”对齐，右侧内容右对齐
+            middle = middle.trim();//换行后删除右空格
+            middleLength = getStringPixLength(middle) % WIDTH_PIXEL;//删除有空格后重新获取长度
+            middle += "\n";
+            //若中间内容长度较长，超出右侧的空间（WIDTH_PIXEL-170），则右对齐打印，左侧间距为：WIDTH_PIXEL - middleLength
+            tmp = setLocation(Math.min(170, WIDTH_PIXEL - middleLength));
+        } else if (middle.length() + right.length() >= 12 || fontSize == FONT_BIG && middle.length() + right.length() >= 8) {
+            //数量与小计的字符长度超出其默认范围12，则往从右往左打印
+            //大字体字符长度范围为8
             tmp = setLocation(leftRemaining);
         } else {
-            tmp = setLocation(240);
+            if (fontSize == FONT_BIG)
+                //大字体头部的“数量”位置调整为距左侧170像素
+                tmp = setLocation(170);
+            else
+                tmp = setLocation(240);
         }
 
         System.arraycopy(tmp, 0, byteBuffer, iNum, tmp.length);
@@ -315,7 +348,11 @@ public class PrintUtil {
     }
 
     public void printDashLine() {
-        printHY("--------------------------------");
+        if (fontSize == FONT_BIG)
+            //大字体虚线长度调整
+            printHY("----------------");
+        else
+            printHY("--------------------------------");
     }
 
     /*************************************************************************
@@ -467,9 +504,9 @@ public class PrintUtil {
 
                 try {
                     PrintUtil print = new PrintUtil();
-                    print.setAlignCmd(ALIGN_CENTER);
                     print.setFontSizeCmd(FONT_BIG);
                     print.setFontBoldCmd(FONT_BOLD);
+                    print.setAlignCmd(ALIGN_CENTER);
                     print.printHY("美团外卖");
                     print.printLine();
                     print.printLine();

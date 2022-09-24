@@ -50,8 +50,9 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     //noinspection GradleCompatible
     implementation 'com.android.support:design:28.0.0'
-    //注解get Set+
-    implementation 'org.projectlombok:lombok:1.18.6'
+    //注解get Set+ （兼容高版本Android studio）
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.18'
+    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.18'
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.50'
     implementation 'com.github.ybq:Android-SpinKit:1.2.0'
     implementation 'com.github.promeg:tinypinyin:1.0.0'
@@ -64,7 +65,7 @@ dependencies {
     //汉印SDK
     implementation files('libs/Android_Print_SDK_ESC_V1.11.jar')
     //爱印SDK
-    implementation files('libs/android_print_sdk .jar')
+    implementation files('libs/android_print_sdk.jar')
     //复坤SDK
     api(name: 'autoreplyprint', ext: 'aar')
 
