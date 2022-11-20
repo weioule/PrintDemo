@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">PrintDemo</string>
+    <string name="receipt_information_exception">打印的小票数据异常！</string>
+</resources>

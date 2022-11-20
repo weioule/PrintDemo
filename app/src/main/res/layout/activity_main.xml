@@ -7,9 +7,31 @@
     tools:context=".activity.MainActivity">
 
     <Button
+        android:id="@+id/connect_and_print"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="35dp"
+        android:text="连接并打印单张小票"
+        app:layout_constraintBottom_toTopOf="@+id/connect_and_prints"
+        app:layout_constraintLeft_toLeftOf="@+id/connect_and_prints"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/connect_and_prints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="35dp"
+        android:text="连接并打印多张小票"
+        app:layout_constraintBottom_toTopOf="@+id/select_printer"
+        app:layout_constraintLeft_toLeftOf="@+id/select_printer"
+        tools:ignore="MissingConstraints" />
+
+    <Button
         android:id="@+id/mask_hint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_marginRight="100dp"
         android:text="蒙版提示"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

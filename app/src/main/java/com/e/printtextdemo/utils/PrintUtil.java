@@ -480,11 +480,11 @@ public class PrintUtil {
 
                 if (null == data) {
                     orderBean[0] = new OrderBean();
-                    orderBean[0].setTime(1577359134114l);
-                    orderBean[0].setCode("20211212155816000001");
-                    orderBean[0].setName("小明");
-                    orderBean[0].setPhone("177****8718");
-                    orderBean[0].setAddress("上海市杨浦区政立路485号哔哩哔哩大厦5楼");
+                    orderBean[0].setCreateTime(1577359134114l);
+                    orderBean[0].setOrderCode("20211212155816000001");
+                    orderBean[0].setReceiveMan("小明");
+                    orderBean[0].setReceiveMobile("177****8718");
+                    orderBean[0].setReceiveAddress("上海市杨浦区政立路485号哔哩哔哩大厦5楼");
                     orderBean[0].setExpectedReach("18:50");
                     orderBean[0].setRemark("微微辣，可以微麻，多加一点香菜，谢谢！");
                     orderBean[0].setBusinessPhone("800-820-8820");
@@ -523,10 +523,10 @@ public class PrintUtil {
                     print.setFontSizeCmd(FONT_NORMAL);
                     print.setFontBoldCmd(FONT_BOLD_CANCEL);
                     SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-                    print.print(print.printTwoColumn("下单时间:", format.format(orderBean[0].getTime())));
+                    print.print(print.printTwoColumn("下单时间:", format.format(orderBean[0].getCreateTime())));
                     print.printLine();
 
-                    print.print(print.printTwoColumn("订单编号:", orderBean[0].getCode()));
+                    print.print(print.printTwoColumn("订单编号:", orderBean[0].getOrderCode()));
                     print.printLine();
 
                     print.printDashLine();
@@ -534,17 +534,17 @@ public class PrintUtil {
 
                     print.setFontBoldCmd(FONT_BOLD);
                     print.setFontSizeCmd(FONT_MIDDLE);
-                    print.printHY(orderBean[0].getName());
+                    print.printHY(orderBean[0].getReceiveMan());
                     print.printLine();
                     print.setFontSizeCmd(FONT_MIDDLE_);
                     print.setFontBoldCmd(FONT_BOLD_CANCEL);
-                    String receiveMobile = orderBean[0].getPhone();
+                    String receiveMobile = orderBean[0].getReceiveMobile();
                     print.printHY(receiveMobile.substring(0, 3) + "****" + receiveMobile.substring(7, 11));
 
                     print.setFontSizeCmd(FONT_NORMAL);
                     print.setFontBoldCmd(FONT_BOLD);
                     Print.PrintAndFeedNLine((byte) 30);
-                    print.printHY(orderBean[0].getAddress());
+                    print.printHY(orderBean[0].getReceiveAddress());
                     print.printLine();
 
                     Print.PrintAndFeedNLine((byte) 40);

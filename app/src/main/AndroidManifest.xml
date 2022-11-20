@@ -14,15 +14,21 @@
         android:roundIcon="@drawable/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.MaskHintActivity" />
-        <activity android:name=".activity.MainActivity">
+        <activity
+            android:name=".activity.MaskHintActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.SelectPrinterActivity" />
+        <activity
+            android:name=".activity.SelectPrinterActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

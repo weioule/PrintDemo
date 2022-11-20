@@ -10,5 +10,5 @@ import lombok.Data;
 public class FoodBean {
     private String name;
     private int count;
-    private int price;
+    private double price;
 }

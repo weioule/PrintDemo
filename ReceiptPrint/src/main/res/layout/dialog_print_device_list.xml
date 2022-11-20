@@ -1,0 +1,44 @@
+<!-- 搜索蓝牙 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/titleView"
+    android:paddingBottom="15dp"
+    android:background="@drawable/white_round_bg">
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:text="请选择打印机"
+        android:textColor="@color/txt_color_66"
+        android:textSize="18sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="20dp"
+        android:overScrollMode="never" />
+
+
+    <FrameLayout
+        android:layout_margin="6dp"
+        android:layout_alignParentRight="true"
+        android:id="@+id/flClose"
+        android:layout_width="40dp"
+        android:layout_height="40dp">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_close"/>
+    </FrameLayout>
+</RelativeLayout>

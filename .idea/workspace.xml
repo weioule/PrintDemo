@@ -7,18 +7,170 @@
   </component>
   <component name="AndroidLogFilters">
     <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand />
+    <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5bb500c-d27c-4504-836a-0bc358a89ed1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
+    <list default="true" id="c5bb500c-d27c-4504-836a-0bc358a89ed1" name="Default Changelist" comment="新增打印机连接并打印的library库">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/consumer-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/java/com/weioule/receiptprint/Callback.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/java/com/weioule/receiptprint/DeviceAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/java/com/weioule/receiptprint/ReceiptPrintUtil.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/java/com/weioule/receiptprint/ToastUtil.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/java/com/weioule/receiptprint/Utils.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/java/com/weioule/receiptprint/bean/DeviceBean.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/java/com/weioule/receiptprint/bean/OriginalDataBean.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/java/com/weioule/receiptprint/bean/PrintLineInfoBean.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/java/com/weioule/receiptprint/widget/CommonDialog.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/java/com/weioule/receiptprint/widget/PrintDeviceListDialog.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/java/com/weioule/receiptprint/widget/RecyclerViewDivider.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/java/com/weioule/receiptprint/widget/WaitingDialog.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/anim/action_sheet_in.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/anim/action_sheet_out.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/anim/enter_ios_anim.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/anim/exit_ios_anim.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/drawable-hdpi-v4/alert_bg.9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/drawable-hdpi-v4/progressdialog_anim1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/drawable-hdpi-v4/progressdialog_anim2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/drawable-hdpi-v4/progressdialog_anim3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/drawable-hdpi-v4/progressdialog_anim4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/drawable-hdpi-v4/progressdialog_anim5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/drawable-hdpi-v4/progressdialog_anim6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/drawable-hdpi-v4/progressdialog_anim7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/drawable-hdpi-v4/progressdialog_anim8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/drawable-hdpi-v4/progressdialog_anim9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/drawable/bg_dialog.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/drawable/btn_cancel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/drawable/btn_ok.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/drawable/ic_close.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/drawable/item_bg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/drawable/loading_progress.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/drawable/white_round_bg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/layout/device_item.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/layout/dialog_print_device_list.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/layout/dialog_text.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/layout/dialog_waiting.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/utils/TemplateUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_annotation_annotation_1_1_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_appcompat_appcompat_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_appcompat_appcompat_1_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_appcompat_appcompat_resources_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_appcompat_appcompat_resources_1_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_common_2_1_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_asynclayoutinflater_asynclayoutinflater_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_asynclayoutinflater_asynclayoutinflater_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cardview_cardview_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cardview_cardview_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_collection_collection_1_1_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_1_1_3_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_1_1_3_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_solver_1_1_3_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_coordinatorlayout_coordinatorlayout_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_coordinatorlayout_coordinatorlayout_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_core_core_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_customview_customview_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_customview_customview_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_documentfile_documentfile_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_documentfile_documentfile_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_drawerlayout_drawerlayout_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_drawerlayout_drawerlayout_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_fragment_fragment_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_fragment_fragment_1_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_interpolator_interpolator_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_interpolator_interpolator_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_ui_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_ui_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_utils_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_utils_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_1_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_loader_loader_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_loader_loader_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_localbroadcastmanager_localbroadcastmanager_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_localbroadcastmanager_localbroadcastmanager_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_print_print_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_print_print_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_recyclerview_recyclerview_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_recyclerview_recyclerview_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_savedstate_savedstate_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_savedstate_savedstate_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_slidingpanelayout_slidingpanelayout_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_slidingpanelayout_slidingpanelayout_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_swiperefreshlayout_swiperefreshlayout_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_swiperefreshlayout_swiperefreshlayout_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_core_1_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_core_1_2_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_espresso_espresso_core_3_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_espresso_espresso_core_3_2_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_espresso_espresso_idling_resource_3_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_espresso_espresso_idling_resource_3_2_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_ext_junit_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_ext_junit_1_1_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_monitor_1_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_monitor_1_2_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_runner_1_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_runner_1_2_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_transition_transition_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_transition_transition_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_1_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_animated_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_animated_1_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_versionedparcelable_versionedparcelable_1_1_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_viewpager_viewpager_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_viewpager_viewpager_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_CymChad_BaseRecyclerViewAdapterHelper_2_9_50_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_CymChad_BaseRecyclerViewAdapterHelper_2_9_50_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_promeg_tinypinyin_1_0_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_ybq_Android_SpinKit_1_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_ybq_Android_SpinKit_1_2_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_material_material_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_material_material_1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_2_0_1_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_javawriter_2_1_1_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_inject_javax_inject_1_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_sf_kxml_kxml2_2_3_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_integration_1_3_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_projectlombok_lombok_1_18_6_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/SelectPrinterActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/SelectPrinterActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/Android_Print_SDK_ESC_V1.11.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/Android_Print_SDK_ESC_V1.11.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/android_print_sdk.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/android_print_sdk.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/arm64-v8a/libLZO.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/arm64-v8a/libLZO.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/arm64-v8a/libprinter_helper_cmd.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/arm64-v8a/libprinter_helper_cmd.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/arm64-v8a/libprinter_model.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/arm64-v8a/libprinter_model.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/arm64-v8a/libprt_serial_port.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/arm64-v8a/libprt_serial_port.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/armeabi-v7a/libLZO.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/armeabi-v7a/libLZO.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/armeabi-v7a/libprinter_helper_cmd.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/armeabi-v7a/libprinter_helper_cmd.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/armeabi-v7a/libprinter_model.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/armeabi-v7a/libprinter_model.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/armeabi-v7a/libprt_serial_port.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/armeabi-v7a/libprt_serial_port.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/armeabi/libLZO.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/armeabi/libLZO.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/armeabi/libprinter_helper_cmd.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/armeabi/libprinter_helper_cmd.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/armeabi/libprinter_model.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/armeabi/libprinter_model.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/armeabi/libprt_serial_port.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/armeabi/libprt_serial_port.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/autoreplyprint.aar" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/autoreplyprint.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/mips/libLZO.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/mips/libLZO.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/mips/libprinter_helper_cmd.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/mips/libprinter_helper_cmd.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/mips/libprinter_model.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/mips/libprinter_model.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/mips/libprt_serial_port.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/mips/libprt_serial_port.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/mips64/libLZO.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/mips64/libLZO.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/mips64/libprinter_helper_cmd.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/mips64/libprinter_helper_cmd.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/mips64/libprinter_model.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/mips64/libprinter_model.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/mips64/libprt_serial_port.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/mips64/libprt_serial_port.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/x86/libLZO.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/x86/libLZO.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/x86/libprinter_helper_cmd.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/x86/libprinter_helper_cmd.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/x86/libprinter_model.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/x86/libprinter_model.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/x86/libprt_serial_port.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/x86/libprt_serial_port.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/x86_64/libLZO.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/x86_64/libLZO.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/x86_64/libprinter_helper_cmd.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/x86_64/libprinter_helper_cmd.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/x86_64/libprinter_model.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/x86_64/libprinter_model.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/libs/x86_64/libprt_serial_port.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/x86_64/libprt_serial_port.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/model/FoodBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/model/FoodBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/model/OrderBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/model/OrderBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/utils/PrintUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/utils/PrintUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
-    <ignored path="../../App/App.iml" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,10 +179,7 @@
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
-  <component name="DefaultGradleProjectSettings">
-    <option name="isMigrated" value="true" />
-  </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="4af5f2b1" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[VirtualDevicePath@C:\Users\17621\.android\avd\Pixel_2_API_24.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -77,264 +226,65 @@
       </state>
     </system>
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="45" column="55" selection-start-line="45" selection-start-column="55" selection-end-line="45" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="7" column="60" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/utils/PrintUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="432" column="73" lean-forward="true" selection-start-line="432" selection-start-column="73" selection-end-line="432" selection-end-column="73" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#12795#12796#0" expanded="true" />
-                <element signature="e#12870#12871#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/SelectPrinterActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4197">
-              <caret line="112" column="31" selection-start-line="112" selection-start-column="31" selection-end-line="112" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/model/SelectPrinterAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1740">
-              <caret line="87" column="44" selection-start-line="87" selection-start-column="44" selection-end-line="87" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1160">
-              <caret line="58" column="27" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/MyApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_dialog_progress_back.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="valueResourceFile" />
+        <option value="Class" />
+        <option value="Kotlin Class" />
+        <option value="layoutResourceFile" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>CIRCULAR</find>
-      <find>OVAL</find>
-      <find>RECTANGULAR</find>
-      <find>customGuideView</find>
-      <find>myShape</find>
-      <find>outsideSpac</find>
-      <find>outsideShape</find>
-      <find>outsideSpace =</find>
-      <find>setDotted</find>
-      <find>dotted</find>
-      <find>setMoreTransparentView</find>
-      <find>ll_speed</find>
-      <find>cancelable</find>
-      <find>cancelable =</find>
-      <find>mPrinter</find>
-      <find>toastUtil</find>
-      <find>fin</find>
-      <find>finish</find>
-      <find>mAdapter</find>
-      <find>ic_back</find>
-      <find>RecyclerView</find>
-      <find>bt_connecting</find>
-      <find>autoreplyprint</find>
-      <find>initA</find>
-      <find>Handler_Connect_Success</find>
-      <find>http://weixin.qq.com</find>
-      <find>oldFKPinter =</find>
-      <find>oldAYPinter</find>
-      <find>oldFKPinter</find>
-      <find>handler</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="UPDATE_TYPE" value="REBASE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/connect_printer.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/item_select_shop.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/ConnectPrinterAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/PrintUtil.java" />
-        <option value="$PROJECT_DIR$/settings.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/Utility.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/attrs.xml" />
-        <option value="$PROJECT_DIR$/app/proguard-rules.pro" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/main_mask_hint_6.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/ConnectPrinterDialog.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/main_mask_hint_4.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/main_mask_hint_3.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/GuideView.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/HintView.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/RoundImageView.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/RoundedImageView.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/MaskHintActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_mask_hint.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/MaskHintActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/utils/Utility.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/BluetoothDeviceBean.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/Constants.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/utils/ToastUtil.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/MyApplication.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_select_printer.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/model/BluetoothDeviceBean.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/SelectPrinterAdapter.java" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/model/SelectPrinterAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/.gitignore" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/SelectPrinterActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/utils/PrintUtil.java" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="1705" />
-    <option name="height" value="895" />
-  </component>
+  <component name="ProjectId" id="2F49EU21RgLPiXd1LvDRL8WwBC0" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="ProjectPane" />
-      <pane id="AndroidView" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DEBUGGABLE_DEVICE" value="xiaomi-redmi_8a-13e38c510606" />
+    <property name="DEBUGGABLE_DEVICE" value="honeywell-scanpal_eda50k-113f2b2" />
     <property name="DEBUGGABLE_PROCESS" value="com.e.printtextdemo" />
     <property name="DEBUGGER_ID" value="Auto" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="13e38c510606" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-04-30T09:39:48.061Z" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
+    <property name="android-custom-viewC:/Users/17621/AppData/Local/Android/Sdk/sources/android-33/android/view/View.java_SELECTED" value="View" />
+    <property name="android-custom-viewC:/project/demo/PrintDemo/aggregation_print/src/main/java/com/example/printutils/weight/MyScrollView.java_SELECTED" value="MyScrollView" />
+    <property name="android-custom-viewC:/project/demo/PrintDemo/category/src/main/java/com/weioule/category/ChildRecyclerview.java_SELECTED" value="ChildRecyclerview" />
+    <property name="android-custom-viewC:/project/demo/PrintDemo/category/src/main/java/com/weioule/category/ParentRecyclerView.java_SELECTED" value="ParentRecyclerView" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../App" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.weioule.category" />
+    </key>
     <key name="android.template.packageName">
       <recent name="com.e.printtextdemo" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.e.printtextdemo.utils" />
       <recent name="com.e.printtextdemo.model" />
       <recent name="com.e.printtextdemo.activity" />
       <recent name="com.e.printtextdemo" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\project\demo\PrintDemo\category\src\main\res\layout" />
+      <recent name="C:\project\demo\PrintDemo\app\src\main\res\drawable-xhdpi" />
+      <recent name="C:\project\demo\PrintDemo\aggregation_print\libs" />
       <recent name="C:\project\PrintDemo\app\libs" />
       <recent name="C:\project\PrintDemo\app\src\main\res\drawable-xhdpi" />
-      <recent name="C:\project\PrintDemo\app\src\main\res\layout" />
-      <recent name="C:\project\PrintDemo\app\info" />
-      <recent name="C:\project\PrintDemo\app\src\main\res\drawable-xxhdpi" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Android App.app">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -345,12 +295,14 @@
       </method>
     </configuration>
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
-      <module name="app" />
+      <module name="PrintDemo.app" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
       <option name="DEPLOY_AS_INSTANT" value="false" />
       <option name="ARTIFACT_NAME" value="" />
       <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
       <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="default_activity" />
@@ -359,8 +311,6 @@
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
       <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
       <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
       <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
       <option name="DEBUGGER_TYPE" value="Auto" />
@@ -388,11 +338,74 @@
       </Native>
       <Profilers>
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
         <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
         <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="category" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="PrintDemo.category" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
@@ -422,6 +435,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -496,63 +510,71 @@
       <option name="project" value="LOCAL" />
       <updated>1588932731887</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="二维码打印微调">
+      <created>1588988522282</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1588988522282</updated>
+    </task>
+    <task id="LOCAL-00011" summary="修复打印大字体排版混乱问题">
+      <created>1664018272050</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1664018272050</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.20149253" />
-      <window_info id="Structure" order="2" side_tool="true" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info id="Build Variants" order="4" side_tool="true" />
-      <window_info id="Image Layers" order="5" />
-      <window_info id="Designer" order="6" />
-      <window_info id="Resources Explorer" order="7" weight="0.32995737" />
-      <window_info id="Capture Tool" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="0" weight="0.32962137" />
-      <window_info anchor="bottom" id="TODO" order="1" />
-      <window_info anchor="bottom" id="Terminal" order="2" />
-      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Build" order="4" visible="true" weight="0.20601337" />
-      <window_info anchor="bottom" id="Android Profiler" order="5" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.5044543" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.32962137" />
-      <window_info anchor="bottom" id="Find" order="8" weight="0.32962137" />
-      <window_info anchor="bottom" id="Logcat" order="9" weight="0.5100223" />
-      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Gradle" order="2" weight="0.32995737" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="right" id="Preview" order="5" weight="0.32995737" />
-    </layout>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
-        <entry key="MAIN">
+        <entry key="1">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:C:/project/demo/PrintDemo/app" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
               </option>
             </State>
           </value>
         </entry>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="1" value="TOOL_WINDOW" />
       </map>
     </option>
     <option name="RECENT_FILTERS">
@@ -569,6 +591,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="添加忽略文件" />
@@ -578,362 +601,124 @@
     <MESSAGE value="更换效果图片img02" />
     <MESSAGE value="1 新增选择打印机功能&#10;2 新增爱印打印机支持&#10;2 优化打印排版格式" />
     <MESSAGE value="1 优化汉印与爱印打印机连接状态回显&#10;2 优化打印机连接成功后弹出提示&#10;3 新增复坤打印机支持" />
-    <option name="LAST_COMMIT_MESSAGE" value="1 优化汉印与爱印打印机连接状态回显&#10;2 优化打印机连接成功后弹出提示&#10;3 新增复坤打印机支持" />
+    <MESSAGE value="二维码打印微调" />
+    <MESSAGE value="修复打印大字体排版混乱问题" />
+    <MESSAGE value="新增打印机连接并打印的library库" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增打印机连接并打印的library库" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="731" y="316" key="#Gradle" timestamp="1663742149899">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="731" y="316" key="#Gradle/0.0.1920.1040@0.0.1920.1040" timestamp="1663742149899" />
+    <state x="704" y="221" key="#com.intellij.ide.util.MemberChooser" timestamp="1668876831949">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="704" y="221" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1668876831949" />
+    <state x="743" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1668843513022">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="743" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1668843513022" />
+    <state x="92" y="92" width="1736" height="856" key="AVDManager" timestamp="1668871133089">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="AVDManager/0.0.1920.1040@0.0.1920.1040" timestamp="1668871133089" />
+    <state x="540" y="275" key="AndroidCreateResourceFileDialog" timestamp="1668870003636">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="540" y="275" key="AndroidCreateResourceFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1668870003636" />
+    <state x="736" y="265" key="AndroidProcessChooserDialog" timestamp="1663920685021">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="736" y="265" key="AndroidProcessChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1663920685021" />
+    <state x="598" y="106" key="CommitChangelistDialog2" timestamp="1668940255220">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="598" y="106" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1668940255220" />
+    <state x="184" y="86" width="1536" height="860" key="DiffContextDialog" timestamp="1668940048995">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="184" y="86" width="1536" height="860" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1668940048995" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1668877380718">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1668877380718" />
+    <state width="1877" height="418" key="GridCell.Tab.0.bottom" timestamp="1668879063664">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="418" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1668879063664" />
+    <state width="1877" height="418" key="GridCell.Tab.0.center" timestamp="1668879063664">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="418" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1668879063664" />
+    <state width="1877" height="418" key="GridCell.Tab.0.left" timestamp="1668879063664">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="418" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1668879063664" />
+    <state width="1877" height="418" key="GridCell.Tab.0.right" timestamp="1668879063664">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="418" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1668879063664" />
+    <state width="1877" height="186" key="GridCell.Tab.1.bottom" timestamp="1663920737316">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="186" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1663920737316" />
+    <state width="1877" height="186" key="GridCell.Tab.1.center" timestamp="1663920737316">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="186" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1663920737316" />
+    <state width="1877" height="186" key="GridCell.Tab.1.left" timestamp="1663920737316">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="186" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1663920737316" />
+    <state width="1877" height="186" key="GridCell.Tab.1.right" timestamp="1663920737316">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="186" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1663920737316" />
+    <state x="731" y="221" key="RollbackChangesDialog" timestamp="1668938487273">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="731" y="221" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1668938487273" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1664018835682">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1664018835682" />
+    <state x="662" y="328" key="com.android.tools.idea.run.deployment.SelectMultipleDevicesDialog" timestamp="1668870868082">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="662" y="328" key="com.android.tools.idea.run.deployment.SelectMultipleDevicesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1668870868082" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1668875878256">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1668875878256" />
+    <state x="662" y="252" width="611" height="536" key="find.popup" timestamp="1668873792500">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="662" y="252" width="611" height="536" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1668873792500" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1668843610686">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1668843610686" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1668836523066">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1668836523066" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
       <configuration name="Remote">
         <watch expression="orderBean[0].getTime()" />
         <watch expression="format.format(orderBean[0].getTime())" />
+        <watch expression="middle.length() + right.length() &gt;= 12" />
+        <watch expression="tmp.length" />
+        <watch expression="(int) (pixLength * d + 0.5)" />
+        <watch expression="getStringPixLength(middle)" />
+        <watch expression="getOffset(middle)" />
+        <watch expression="getStringPixLength(str)" />
+        <watch expression="WIDTH_PIXEL - Math.abs(leftRemaining)" />
+        <watch expression="getStringPixLength(left)" />
       </configuration>
     </watches-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/main_mask_hint_3.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-29/android/graphics/Canvas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="1792" column="16" selection-start-line="1792" selection-start-column="16" selection-end-line="1792" selection-end-column="16" />
-          <folding>
-            <element signature="e#73799#73800#0" expanded="true" />
-            <element signature="e#73842#73843#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/main_mask_hint_4.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/header.jpeg" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/header.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/hint_while_playing_img.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/img3.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/img2.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/img1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/main_mask_hint_5.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/info/img001.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/info/img005.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/info/img004.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_mask_hint.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="37" column="42" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/MaskHintActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding>
-            <element signature="e#3124#3125#0" expanded="true" />
-            <element signature="e#3187#3188#0" expanded="true" />
-            <element signature="e#4118#4119#0" expanded="true" />
-            <element signature="e#4181#4182#0" expanded="true" />
-            <element signature="e#4928#4929#0" expanded="true" />
-            <element signature="e#4991#4992#0" expanded="true" />
-            <element signature="e#5736#5737#0" expanded="true" />
-            <element signature="e#5799#5800#0" expanded="true" />
-            <element signature="e#6749#6750#0" expanded="true" />
-            <element signature="e#6812#6813#0" expanded="true" />
-            <element signature="e#6499#6500#0" expanded="true" />
-            <element signature="e#6564#6565#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/widget/RoundedImageView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/widget/HintView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2131#2132#0" expanded="true" />
-            <element signature="e#2177#2178#0" expanded="true" />
-            <element signature="e#2230#2231#0" expanded="true" />
-            <element signature="e#2272#2273#0" expanded="true" />
-            <element signature="e#2315#2316#0" expanded="true" />
-            <element signature="e#2351#2352#0" expanded="true" />
-            <element signature="e#2408#2409#0" expanded="true" />
-            <element signature="e#2456#2457#0" expanded="true" />
-            <element signature="e#2501#2502#0" expanded="true" />
-            <element signature="e#2537#2538#0" expanded="true" />
-            <element signature="e#2808#2809#0" expanded="true" />
-            <element signature="e#2838#2839#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/widget/MaxHeightRecyclerView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/utils/Utility.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="63" column="13" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/model/ConnectPrinterAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/model/FoodBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/widget/ConnectPrinterDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/info/img01.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/info/img02.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/Constants.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_select_printer.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="27" column="44" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="34" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="34" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/BluetoothDeviceBean.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="68" selection-start-line="19" selection-start-column="68" selection-end-line="19" selection-end-column="68" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/model/BluetoothDeviceBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/model/OrderBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_select_printer.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="29" column="40" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="42" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/app/libs/android_print_sdk .jar!/com/android_print_sdk/bluetooth/BluetoothPrinter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="623" column="43" selection-start-line="623" selection-start-column="36" selection-end-line="623" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_back.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/utils/ToastUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="61" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/layout_dialog_progress.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="54" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="45" column="55" selection-start-line="45" selection-start-column="55" selection-end-line="45" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="60" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/model/SelectPrinterAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1740">
-          <caret line="87" column="44" selection-start-line="87" selection-start-column="44" selection-end-line="87" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1160">
-          <caret line="58" column="27" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/MyApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/shape_dialog_progress_back.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/SelectPrinterActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4197">
-          <caret line="112" column="31" selection-start-line="112" selection-start-column="31" selection-end-line="112" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/utils/PrintUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="432" column="73" lean-forward="true" selection-start-line="432" selection-start-column="73" selection-end-line="432" selection-end-column="73" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#12795#12796#0" expanded="true" />
-            <element signature="e#12870#12871#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
   <component name="masterDetails">
     <states>
