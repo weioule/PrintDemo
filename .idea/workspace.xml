@@ -18,158 +18,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5bb500c-d27c-4504-836a-0bc358a89ed1" name="Default Changelist" comment="新增打印机连接并打印的library库">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/consumer-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/java/com/weioule/receiptprint/Callback.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/java/com/weioule/receiptprint/DeviceAdapter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/java/com/weioule/receiptprint/ReceiptPrintUtil.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/java/com/weioule/receiptprint/ToastUtil.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/java/com/weioule/receiptprint/Utils.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/java/com/weioule/receiptprint/bean/DeviceBean.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/java/com/weioule/receiptprint/bean/OriginalDataBean.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/java/com/weioule/receiptprint/bean/PrintLineInfoBean.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/java/com/weioule/receiptprint/widget/CommonDialog.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/java/com/weioule/receiptprint/widget/PrintDeviceListDialog.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/java/com/weioule/receiptprint/widget/RecyclerViewDivider.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/java/com/weioule/receiptprint/widget/WaitingDialog.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/anim/action_sheet_in.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/anim/action_sheet_out.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/anim/enter_ios_anim.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/anim/exit_ios_anim.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/drawable-hdpi-v4/alert_bg.9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/drawable-hdpi-v4/progressdialog_anim1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/drawable-hdpi-v4/progressdialog_anim2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/drawable-hdpi-v4/progressdialog_anim3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/drawable-hdpi-v4/progressdialog_anim4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/drawable-hdpi-v4/progressdialog_anim5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/drawable-hdpi-v4/progressdialog_anim6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/drawable-hdpi-v4/progressdialog_anim7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/drawable-hdpi-v4/progressdialog_anim8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/drawable-hdpi-v4/progressdialog_anim9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/drawable/bg_dialog.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/drawable/btn_cancel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/drawable/btn_ok.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/drawable/ic_close.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/drawable/item_bg.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/drawable/loading_progress.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/drawable/white_round_bg.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/layout/device_item.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/layout/dialog_print_device_list.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/layout/dialog_text.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/layout/dialog_waiting.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/values/colors.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/values/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/res/values/themes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/utils/TemplateUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_annotation_annotation_1_1_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_appcompat_appcompat_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_appcompat_appcompat_1_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_appcompat_appcompat_resources_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_appcompat_appcompat_resources_1_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_common_2_1_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_asynclayoutinflater_asynclayoutinflater_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_asynclayoutinflater_asynclayoutinflater_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cardview_cardview_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cardview_cardview_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_collection_collection_1_1_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_1_1_3_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_1_1_3_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_solver_1_1_3_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_coordinatorlayout_coordinatorlayout_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_coordinatorlayout_coordinatorlayout_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_core_core_1_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_customview_customview_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_customview_customview_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_documentfile_documentfile_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_documentfile_documentfile_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_drawerlayout_drawerlayout_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_drawerlayout_drawerlayout_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_fragment_fragment_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_fragment_fragment_1_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_interpolator_interpolator_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_interpolator_interpolator_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_ui_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_ui_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_utils_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_utils_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_1_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_loader_loader_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_loader_loader_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_localbroadcastmanager_localbroadcastmanager_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_localbroadcastmanager_localbroadcastmanager_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_print_print_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_print_print_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_recyclerview_recyclerview_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_recyclerview_recyclerview_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_savedstate_savedstate_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_savedstate_savedstate_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_slidingpanelayout_slidingpanelayout_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_slidingpanelayout_slidingpanelayout_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_swiperefreshlayout_swiperefreshlayout_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_swiperefreshlayout_swiperefreshlayout_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_core_1_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_core_1_2_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_espresso_espresso_core_3_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_espresso_espresso_core_3_2_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_espresso_espresso_idling_resource_3_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_espresso_espresso_idling_resource_3_2_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_ext_junit_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_ext_junit_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_monitor_1_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_monitor_1_2_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_runner_1_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_test_runner_1_2_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_transition_transition_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_transition_transition_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_1_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_animated_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_animated_1_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_versionedparcelable_versionedparcelable_1_1_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_viewpager_viewpager_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_viewpager_viewpager_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/img/img106.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/img/img107.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/info/爱印-android-sdk1.6开发文档.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/white_140px_bg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/white_80px_bg.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_CymChad_BaseRecyclerViewAdapterHelper_2_9_50_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_CymChad_BaseRecyclerViewAdapterHelper_2_9_50_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_promeg_tinypinyin_1_0_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_ybq_Android_SpinKit_1_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_ybq_Android_SpinKit_1_2_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_material_material_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_material_material_1_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_2_0_1_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_javawriter_2_1_1_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_inject_javax_inject_1_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__net_sf_kxml_kxml2_2_3_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_integration_1_3_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_projectlombok_lombok_1_18_6_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/Android_Print_SDK_ESC_V1.11.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/Android_Print_SDK_ESC_V1.11.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/android_print_sdk.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/android_print_sdk.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/arm64-v8a/libLZO.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/arm64-v8a/libLZO.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/arm64-v8a/libprinter_helper_cmd.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/arm64-v8a/libprinter_helper_cmd.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/arm64-v8a/libprinter_model.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/arm64-v8a/libprinter_model.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/arm64-v8a/libprt_serial_port.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/arm64-v8a/libprt_serial_port.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/armeabi-v7a/libLZO.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/armeabi-v7a/libLZO.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/armeabi-v7a/libprinter_helper_cmd.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/armeabi-v7a/libprinter_helper_cmd.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/armeabi-v7a/libprinter_model.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/armeabi-v7a/libprinter_model.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/armeabi-v7a/libprt_serial_port.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/armeabi-v7a/libprt_serial_port.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/armeabi/libLZO.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/armeabi/libLZO.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/armeabi/libprinter_helper_cmd.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/armeabi/libprinter_helper_cmd.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/armeabi/libprinter_model.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/armeabi/libprinter_model.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/armeabi/libprt_serial_port.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/armeabi/libprt_serial_port.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/autoreplyprint.aar" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/autoreplyprint.aar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/mips/libLZO.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/mips/libLZO.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/mips/libprinter_helper_cmd.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/mips/libprinter_helper_cmd.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/mips/libprinter_model.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/mips/libprinter_model.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/mips/libprt_serial_port.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/mips/libprt_serial_port.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/mips64/libLZO.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/mips64/libLZO.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/mips64/libprinter_helper_cmd.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/mips64/libprinter_helper_cmd.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/mips64/libprinter_model.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/mips64/libprinter_model.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/mips64/libprt_serial_port.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/mips64/libprt_serial_port.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/x86/libLZO.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/x86/libLZO.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/x86/libprinter_helper_cmd.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/x86/libprinter_helper_cmd.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/x86/libprinter_model.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/x86/libprinter_model.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/x86/libprt_serial_port.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/x86/libprt_serial_port.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/x86_64/libLZO.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/x86_64/libLZO.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/x86_64/libprinter_helper_cmd.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/x86_64/libprinter_helper_cmd.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/x86_64/libprinter_model.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/x86_64/libprinter_model.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/x86_64/libprt_serial_port.so" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/libs/x86_64/libprt_serial_port.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReceiptPrint/src/main/java/com/weioule/receiptprint/ReceiptPrintUtil.kt" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/java/com/weioule/receiptprint/ReceiptPrintUtil.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReceiptPrint/src/main/java/com/weioule/receiptprint/bean/PrintLineInfoBean.kt" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/java/com/weioule/receiptprint/bean/PrintLineInfoBean.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReceiptPrint/src/main/java/com/weioule/receiptprint/widget/PrintDeviceListDialog.kt" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/java/com/weioule/receiptprint/widget/PrintDeviceListDialog.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReceiptPrint/src/main/java/com/weioule/receiptprint/widget/WaitingDialog.kt" beforeDir="false" afterPath="$PROJECT_DIR$/ReceiptPrint/src/main/java/com/weioule/receiptprint/widget/WaitingDialog.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/info/img001.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/img201.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/info/img002.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/img202.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/info/img003.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/img203.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/info/img004.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/img204.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/info/img005.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/img205.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/info/img006.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/img206.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/info/img01.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/img101.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/info/img02.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/img102.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/info/img03.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/img103.JPG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/info/img03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/info/img04.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/img104.JPG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/info/img04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/info/img05.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/app/img/img105.JPG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/info/img05.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/activity/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/model/FoodBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/model/FoodBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/model/OrderBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/model/OrderBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/utils/PrintUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/utils/PrintUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/utils/TemplateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/e/printtextdemo/utils/TemplateUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/print_header.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/print_header.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +54,7 @@
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[VirtualDevicePath@C:\Users\17621\.android\avd\Pixel_2_API_24.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[SerialNumber@113f2b2]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -266,8 +141,12 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.weioule.category" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\project\demo\PrintDemo\category\src\main\res\layout" />
+      <recent name="C:\project\demo\PrintDemo\app\src\main\res\drawable-xhdpi" />
+      <recent name="C:\project\demo\PrintDemo\aggregation_print\libs" />
+      <recent name="C:\project\PrintDemo\app\libs" />
+      <recent name="C:\project\PrintDemo\app\src\main\res\drawable-xhdpi" />
     </key>
     <key name="android.template.packageName">
       <recent name="com.e.printtextdemo" />
@@ -278,12 +157,8 @@
       <recent name="com.e.printtextdemo.activity" />
       <recent name="com.e.printtextdemo" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\project\demo\PrintDemo\category\src\main\res\layout" />
-      <recent name="C:\project\demo\PrintDemo\app\src\main\res\drawable-xhdpi" />
-      <recent name="C:\project\demo\PrintDemo\aggregation_print\libs" />
-      <recent name="C:\project\PrintDemo\app\libs" />
-      <recent name="C:\project\PrintDemo\app\src\main\res\drawable-xhdpi" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.weioule.category" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.app">
@@ -565,6 +440,11 @@
             </State>
           </value>
         </entry>
+        <entry key="3">
+          <value>
+            <State />
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State />
@@ -604,13 +484,10 @@
     <MESSAGE value="二维码打印微调" />
     <MESSAGE value="修复打印大字体排版混乱问题" />
     <MESSAGE value="新增打印机连接并打印的library库" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增打印机连接并打印的library库" />
+    <MESSAGE value="提交因大文件限制需要删除复坤使用示例rar" />
+    <option name="LAST_COMMIT_MESSAGE" value="提交因大文件限制需要删除复坤使用示例rar" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="731" y="316" key="#Gradle" timestamp="1663742149899">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="731" y="316" key="#Gradle/0.0.1920.1040@0.0.1920.1040" timestamp="1663742149899" />
     <state x="704" y="221" key="#com.intellij.ide.util.MemberChooser" timestamp="1668876831949">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -627,10 +504,6 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="540" y="275" key="AndroidCreateResourceFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1668870003636" />
-    <state x="736" y="265" key="AndroidProcessChooserDialog" timestamp="1663920685021">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="736" y="265" key="AndroidProcessChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1663920685021" />
     <state x="598" y="106" key="CommitChangelistDialog2" timestamp="1668940255220">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -659,34 +532,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="418" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1668879063664" />
-    <state width="1877" height="186" key="GridCell.Tab.1.bottom" timestamp="1663920737316">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="186" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1663920737316" />
-    <state width="1877" height="186" key="GridCell.Tab.1.center" timestamp="1663920737316">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="186" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1663920737316" />
-    <state width="1877" height="186" key="GridCell.Tab.1.left" timestamp="1663920737316">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="186" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1663920737316" />
-    <state width="1877" height="186" key="GridCell.Tab.1.right" timestamp="1663920737316">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="186" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1663920737316" />
     <state x="731" y="221" key="RollbackChangesDialog" timestamp="1668938487273">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="731" y="221" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1668938487273" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1664018835682">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1664018835682" />
     <state x="662" y="328" key="com.android.tools.idea.run.deployment.SelectMultipleDevicesDialog" timestamp="1668870868082">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="662" y="328" key="com.android.tools.idea.run.deployment.SelectMultipleDevicesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1668870868082" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1674194092875">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1674194092875" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1668875878256">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

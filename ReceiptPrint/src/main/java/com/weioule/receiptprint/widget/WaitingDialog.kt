@@ -19,7 +19,7 @@ class WaitingDialog : ProgressDialog {
     constructor(context: Context?) : super(context, R.style.dialog) {}
     constructor(context: Context?, theme: Int) : super(context, theme) {}
 
-    override fun onCreate(savedInstanceState: Bundle) {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         this.setContentView(R.layout.dialog_waiting)
         initView()

@@ -1,18 +1,26 @@
 package com.e.printtextdemo.utils;
 
+import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.Color;
 import android.text.TextUtils;
 
 import com.caysn.autoreplyprint.AutoReplyPrint;
+import com.e.printtextdemo.R;
 import com.e.printtextdemo.model.FoodBean;
 import com.e.printtextdemo.model.OrderBean;
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.MultiFormatWriter;
+import com.google.zxing.WriterException;
+import com.google.zxing.common.BitMatrix;
 import com.weioule.receiptprint.ReceiptPrintUtil;
 import com.weioule.receiptprint.bean.PrintLineInfoBean;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+
+import static android.graphics.Color.BLACK;
+import static android.graphics.Color.WHITE;
 
 /**
  * 小票打印模板
@@ -21,7 +29,7 @@ import java.util.List;
  */
 public class TemplateUtil {
 
-    public static ArrayList<PrintLineInfoBean> getTemplate(OrderBean data) {
+    public static ArrayList<PrintLineInfoBean> getTemplate(Context context, OrderBean data) {
         ArrayList<PrintLineInfoBean> list = new ArrayList<>();
 
         //汉印走纸空行
@@ -41,6 +49,24 @@ public class TemplateUtil {
         list.add(infoBean2);
 
         list.add(new PrintLineInfoBean(PrintLineInfoBean.CONTENT_NEW_LINE));
+        list.add(new PrintLineInfoBean(PrintLineInfoBean.CONTENT_NEW_LINE));
+
+        //根据字符串生成条形码图片并显示在界面上，第二个参数为图片的大小（360*80）
+        Bitmap brCodeBitmap = createBarcode(data.getOrderCode(), 360, 80);
+        //京东到家打印订单号二维码
+        Bitmap bitmapBg = ReceiptPrintUtil.Companion.drawableToBitmap(context.getResources().getDrawable(R.drawable.white_80px_bg));
+        //汉印打印机存在居中问题，故将小票宽度大小的背景图与之合成，再指定左内边距
+        Bitmap codeImg = ReceiptPrintUtil.addBackgroundSynthesis(bitmapBg, brCodeBitmap);
+        PrintLineInfoBean infoBean3 = new PrintLineInfoBean(PrintLineInfoBean.CONTENT_BARCODE);
+        //兼容三款打印机
+        infoBean3.setHyBitmap(codeImg);
+        infoBean3.setFkBitmap(brCodeBitmap);
+        infoBean3.setAyCodeUrl(data.getOrderCode());
+        infoBean3.setParam1(7);
+        infoBean3.setParam2(100);
+        infoBean3.setParam3(0);
+        list.add(infoBean3);
+
         list.add(new PrintLineInfoBean(PrintLineInfoBean.CONTENT_NEW_LINE));
 
         PrintLineInfoBean infoBean4 = new PrintLineInfoBean();
@@ -173,8 +199,8 @@ public class TemplateUtil {
             for (FoodBean bean : beans) {
                 PrintLineInfoBean infoBean18 = new PrintLineInfoBean();
                 infoBean18.setContentLeft(bean.getName());
-                infoBean18.setContentCenter(" x" + bean.getCount());
-                infoBean18.setContentRight(bean.getPrice() + "");
+                infoBean18.setContentCenter("x" + bean.getCount());
+                infoBean18.setContentRight(String.format("%.2f", bean.getPrice()));
                 infoBean18.setFontBold(PrintLineInfoBean.FONT_BOLD_NORMAL);
                 infoBean18.setAyFontBold(PrintLineInfoBean.FONT_BOLD_NORMAL);
                 infoBean18.setColumnNum(PrintLineInfoBean.THREE_COLUMN);
@@ -209,16 +235,19 @@ public class TemplateUtil {
         list.add(new PrintLineInfoBean(PrintLineInfoBean.CONTENT_DOTTED_LINE));
         list.add(new PrintLineInfoBean(PrintLineInfoBean.CONTENT_NEW_LINE));
 
-        Bitmap bitmap = ReceiptPrintUtil.createQRCodeBitmap("http://weixin.qq.com", 150, 150, "UTF-8", "H", "0", Color.BLACK, Color.WHITE);
-        PrintLineInfoBean infoBean21 = new PrintLineInfoBean(PrintLineInfoBean.CONTENT_QRCODE);
+        //京东到家打印订单号二维码
+        Bitmap bitmap = ReceiptPrintUtil.createQRCodeBitmap("http://weixin.qq.com", 140, 140, "UTF-8", "H", "0", BLACK, WHITE);
+        Bitmap bitmapBg2 = ReceiptPrintUtil.Companion.drawableToBitmap(context.getResources().getDrawable(R.drawable.white_140px_bg));
+        //汉印打印机存在居中问题，故将小票宽度大小的背景图与之合成
+        Bitmap codeImg2 = ReceiptPrintUtil.addBackgroundSynthesis(bitmapBg2, bitmap);
+        PrintLineInfoBean infoBean21 = new PrintLineInfoBean(PrintLineInfoBean.CONTENT_BITMAP);
         //兼容三款打印机
-        infoBean21.setBitmap(bitmap);
+        infoBean21.setHyBitmap(codeImg2);
+        infoBean21.setFkBitmap(bitmap);
         infoBean21.setAyCodeUrl("http://weixin.qq.com");
-        infoBean21.setHyBitmapX(1);
-        infoBean21.setHyBitmapY(0);
-        infoBean21.setAyBitmapX(0);
-        infoBean21.setAyBitmapY(72);
-        infoBean21.setAyBitmapZ(4);
+        infoBean21.setParam1(0);
+        infoBean21.setParam2(72);
+        infoBean21.setParam3(4);
         list.add(infoBean21);
 
         PrintLineInfoBean infoBean22 = new PrintLineInfoBean();
@@ -232,7 +261,7 @@ public class TemplateUtil {
         list.add(new PrintLineInfoBean(PrintLineInfoBean.CONTENT_NEW_LINE));
 
         PrintLineInfoBean infoBean23 = new PrintLineInfoBean();
-        infoBean23.setContentCenter("商家电话：" + data.getReceiveMobile());
+        infoBean23.setContentCenter("商家电话：" + data.getBusinessPhone());
         infoBean23.setFontBold(PrintLineInfoBean.FONT_BOLD_NORMAL);
         infoBean23.setAyFontBold(PrintLineInfoBean.FONT_BOLD_NORMAL);
         infoBean23.setFontAlign(PrintLineInfoBean.ALIGN_CENTER);
@@ -240,6 +269,29 @@ public class TemplateUtil {
         list.add(infoBean23);
 
         return list;
+    }
+
+    private static Bitmap createBarcode(String contents, int desiredWidth, int desiredHeight) {
+        MultiFormatWriter writer = new MultiFormatWriter();
+        BitMatrix result = null;
+        try {
+            result = writer.encode(contents, BarcodeFormat.CODE_128, desiredWidth, desiredHeight);
+        } catch (WriterException e) {
+            e.printStackTrace();
+        }
+        int width = result.getWidth();
+        int height = result.getHeight();
+        int[] pixels = new int[width * height];
+        // All are 0, or black, by default
+        for (int y = 0; y < height; y++) {
+            int offset = y * width;
+            for (int x = 0; x < width; x++) {
+                pixels[offset + x] = result.get(x, y) ? BLACK : WHITE;
+            }
+        }
+        Bitmap bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+        bitmap.setPixels(pixels, 0, width, 0, 0, width, height);
+        return bitmap;
     }
 
 }

@@ -6,6 +6,7 @@
       <root url="jar://$USER_HOME$/AppData/Local/Android/Sdk/caches/transforms-2/files-2.1/ef377ce349f0124b9a2660764b515973/jetified-BaseRecyclerViewAdapterHelper-2.9.50/annotations.zip!/" />
       <root url="jar://$USER_HOME$/AppData/Local/Android/Sdk/caches/transforms-2/files-2.1/da19066ddb4dca5ee7f3bc2e119188c5/jetified-BaseRecyclerViewAdapterHelper-2.9.50/annotations.zip!/" />
       <root url="jar://$USER_HOME$/AppData/Local/Android/Sdk/caches/transforms-2/files-2.1/f5c3ccf4f2ad067112abe559343ea407/jetified-BaseRecyclerViewAdapterHelper-2.9.50/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/AppData/Local/Android/Sdk/caches/transforms-2/files-2.1/fd05f79a143b9a41e634ef110c091f6c/jetified-BaseRecyclerViewAdapterHelper-2.9.50/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="file://$USER_HOME$/AppData/Local/Android/Sdk/caches/transforms-2/files-2.1/08d4ed1ab4f9aaf3b598ec7f0df7c980/jetified-BaseRecyclerViewAdapterHelper-2.9.50/AndroidManifest.xml" />
@@ -23,6 +24,9 @@
       <root url="file://$USER_HOME$/AppData/Local/Android/Sdk/caches/transforms-2/files-2.1/f5c3ccf4f2ad067112abe559343ea407/jetified-BaseRecyclerViewAdapterHelper-2.9.50/res" />
       <root url="file://$USER_HOME$/AppData/Local/Android/Sdk/caches/transforms-2/files-2.1/f5c3ccf4f2ad067112abe559343ea407/jetified-BaseRecyclerViewAdapterHelper-2.9.50/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/AppData/Local/Android/Sdk/caches/transforms-2/files-2.1/f5c3ccf4f2ad067112abe559343ea407/jetified-BaseRecyclerViewAdapterHelper-2.9.50/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/AppData/Local/Android/Sdk/caches/transforms-2/files-2.1/fd05f79a143b9a41e634ef110c091f6c/jetified-BaseRecyclerViewAdapterHelper-2.9.50/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/AppData/Local/Android/Sdk/caches/transforms-2/files-2.1/fd05f79a143b9a41e634ef110c091f6c/jetified-BaseRecyclerViewAdapterHelper-2.9.50/res" />
+      <root url="file://$USER_HOME$/AppData/Local/Android/Sdk/caches/transforms-2/files-2.1/fd05f79a143b9a41e634ef110c091f6c/jetified-BaseRecyclerViewAdapterHelper-2.9.50/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/AppData/Local/Android/Sdk/caches/modules-2/files-2.1/com.github.CymChad/BaseRecyclerViewAdapterHelper/2.9.50/48b1b1ae55035463db012b0cf1ac2190101fe241/BaseRecyclerViewAdapterHelper-2.9.50-javadoc.jar!/" />

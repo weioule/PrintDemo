@@ -2,7 +2,6 @@ package com.e.printtextdemo.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.view.View;
 
 import androidx.annotation.Nullable;
@@ -47,13 +46,13 @@ public class MainActivity extends AppCompatActivity {
         public void onNoDoubleClick(View view) {
             switch (view.getId()) {
                 case R.id.connect_and_print:
-                    ReceiptPrintUtil.connectAndPrint(MainActivity.this, TemplateUtil.getTemplate(getOrderInfo()));
+                    ReceiptPrintUtil.connectAndPrint(MainActivity.this, TemplateUtil.getTemplate(MainActivity.this, getOrderInfo()));
                     break;
                 case R.id.connect_and_prints:
                     ArrayList<OriginalDataBean> list = new ArrayList<>();
                     for (int i = 0; i < 5; i++) {
                         OriginalDataBean dataBean = new OriginalDataBean();
-                        dataBean.setPrintLineInfoBeanList(TemplateUtil.getTemplate(getOrderInfo()));
+                        dataBean.setPrintLineInfoBeanList(TemplateUtil.getTemplate(MainActivity.this, getOrderInfo()));
                         list.add(dataBean);
                     }
 
@@ -96,14 +95,14 @@ public class MainActivity extends AppCompatActivity {
     private OrderBean getOrderInfo() {
         OrderBean bean = new OrderBean();
         bean.setOrderCode("20211212155816000001");
-        bean.setCreateTime(SystemClock.currentThreadTimeMillis());
+        bean.setCreateTime(System.currentTimeMillis());
         bean.setReceiveMan("小明");
         bean.setReceiveMobile("177****8718");
         bean.setReceiveAddress("上海市杨浦区政立路485号哔哩哔哩大厦5楼");
         bean.setExpectedReach("2022-10-01:18:00");
         bean.setBusinessPhone("800-820-8820");
         bean.setRemark("微微辣，可以微麻，多加一点香菜，谢谢！");
-        bean.setTotal("888888");
+        bean.setTotal("888888.00");
 
         ArrayList<FoodBean> ls = new ArrayList<>();
         ArrayList<String> order = new ArrayList<>();

@@ -176,7 +176,7 @@ class ReceiptPrintUtil {
         return stText?.toByteArray(charset("GBK"))!!
     }
 
-    //这里计算打印内容的长度，如果需要处理间距，或不同大小的字体调节后，可以在这里做适配处理
+    //这里计算打印内容的长度，如果需要处理间距、或不同大小的字体调整，可以在这里做适配处理
     private fun getStringPixLength(str: String?): Int {
         var pixLength = 0
         var c: Char
@@ -368,7 +368,7 @@ class ReceiptPrintUtil {
          *
          * @param data 带打印配置的每行数据信息集合 (也就是单个小票打印)
          */
-        @kotlin.jvm.JvmStatic
+        @JvmStatic
         fun connectAndPrint(
             act: Activity?,
             data: List<PrintLineInfoBean>,
@@ -386,7 +386,7 @@ class ReceiptPrintUtil {
          *
          * @param data 带打印配置的每行数据信息集合 (也就是单个小票打印)
          */
-        @kotlin.jvm.JvmStatic
+        @JvmStatic
         fun connectAndPrintList(act: Activity?, data: List<OriginalDataBean>?) {
             connectAndPrintList(act, data, null)
         }
@@ -396,7 +396,7 @@ class ReceiptPrintUtil {
          *
          * @param list 原始数据集合，里面包含带打印配置的每行数据信息集合 (也就是多个小票打印)
          */
-        @kotlin.jvm.JvmStatic
+        @JvmStatic
         fun connectAndPrintList(
             act: Activity?,
             list: List<OriginalDataBean>?,
@@ -1000,7 +1000,7 @@ class ReceiptPrintUtil {
          * @param color_white            白色色块
          * @return BitMap
          */
-        @kotlin.jvm.JvmStatic
+        @JvmStatic
         fun createQRCodeBitmap(
             content: String?, width: Int, height: Int,
             character_set: String?, error_correction_level: String?,
@@ -1054,42 +1054,8 @@ class ReceiptPrintUtil {
             }
         }
 
-        fun addbackground4onlyicon(bg: Bitmap, icon: Bitmap, left: Int): Bitmap {
-            val paint = Paint()
-            val canvas = Canvas(bg)
-            val b1w = bg.width
-            val b1h = bg.height
-            val b2w = icon.width
-            val b2h = icon.height
-            val bx = (b1w - b2w) / 2
-            val by = (b1h - b2h) / 2
-            canvas.drawBitmap(icon, left.toFloat(), by.toFloat(), paint)
-            //叠加新图b2 并且居中
-//        canvas.save(Canvas.ALL_SAVE_FLAG);
-            canvas.save()
-            canvas.restore()
-            return bg
-        }
-
-        /**
-         * Drawable转换成一个Bitmap
-         *
-         * @param drawable drawable对象
-         * @return
-         */
-        fun drawableToBitmap(drawable: Drawable): Bitmap {
-            val bitmap = Bitmap.createBitmap(
-                drawable.intrinsicWidth, drawable.intrinsicHeight,
-                if (drawable.opacity != PixelFormat.OPAQUE) Bitmap.Config.ARGB_8888 else Bitmap.Config.RGB_565
-            )
-            val canvas = Canvas(bitmap)
-            drawable.setBounds(0, 0, drawable.intrinsicWidth, drawable.intrinsicHeight)
-            drawable.draw(canvas)
-            return bitmap
-        }
-
         private val barcodeFormat = BarcodeFormat.CODE_128
-        private fun creatBarcode(contents: String, desiredWidth: Int, desiredHeight: Int): Bitmap {
+        private fun createBarcode(contents: String, desiredWidth: Int, desiredHeight: Int): Bitmap {
             val writer = MultiFormatWriter()
             var result: BitMatrix? = null
             try {
@@ -1181,10 +1147,10 @@ class ReceiptPrintUtil {
                     CommonDialog.Builder(activity!!)
                         .setTitle("温馨提示：")
                         .setMessage("打印机状态异常或未开启,请确认开启后,重新打印")
-                        .setOnConfirmClickListener("已开启") {
+                        .setOnConfirmClickListener("取消") {
                             connectAndPrint()
                         }
-                        .setOnCancelClickListener("取消") {
+                        .setOnCancelClickListener("已开启") {
                             if (null != listener)
                                 listener!!.onResult(false)
                         }
@@ -1256,16 +1222,10 @@ class ReceiptPrintUtil {
                         )
                     )
                     PrintLineInfoBean.CONTENT_BITMAP, PrintLineInfoBean.CONTENT_BARCODE -> Print.PrintBitmap(
-                        infoBean.bitmap,
-                        infoBean.hyBitmapX,
-                        infoBean.hyBitmapY
+                        infoBean.hyBitmap,
+                        0,
+                        0
                     )
-                    PrintLineInfoBean.CONTENT_QRCODE -> {
-                        //转换成字节数组
-                        val array = draw2PxPoint(infoBean.bitmap)
-                        //打印
-                        Print.WriteData(array)
-                    }
                     PrintLineInfoBean.CONTENT_DOTTED_LINE -> print.printDashLine()
                     PrintLineInfoBean.CONTENT_NEW_LINE -> print.printLine()
                     PrintLineInfoBean.CONTENT_BLANK_LINE -> Print.PrintAndFeedNLine(infoBean.printAndFeedNLine)
@@ -1288,6 +1248,7 @@ class ReceiptPrintUtil {
             val print = ReceiptPrintUtil()
             mPrinter.init()
             for (infoBean in list!!) {
+                print.setFontSizeCmd(infoBean.fontSize)
                 mPrinter.setPrinter(BluetoothPrinter.COMM_ALIGN, infoBean.fontAlign)
                 if (infoBean.ayFontBold == PrintLineInfoBean.FONT_BOLD) {
                     mPrinter.setCharacterMultiple(1, 1)
@@ -1359,12 +1320,6 @@ class ReceiptPrintUtil {
                             )
                         )
                     }
-                    PrintLineInfoBean.CONTENT_QRCODE -> {
-                        val bitmap = infoBean.bitmap
-                        //大小调节可把bitmap设置宽高后再打印
-                        val bmpByteArray = draw2PxPoint(bitmap)
-                        mPrinter.printByteData(bmpByteArray)
-                    }
                     PrintLineInfoBean.CONTENT_BITMAP -> {
                         mPrinter.setPrinter(
                             BluetoothPrinter.COMM_ALIGN,
@@ -1372,26 +1327,22 @@ class ReceiptPrintUtil {
                         )
                         val qrCode = Barcode(
                             BluetoothPrinter.BAR_CODE_TYPE_QRCODE,
-                            infoBean.ayBitmapX,
-                            infoBean.ayBitmapY,
-                            infoBean.ayBitmapZ,
+                            infoBean.param1,
+                            infoBean.param2,
+                            infoBean.param3,
                             infoBean.ayCodeUrl
                         )
                         mPrinter.printBarCode(qrCode)
                     }
                     PrintLineInfoBean.CONTENT_BARCODE -> {
                         // 根据字符串生成条形码图片并显示在界面上
-                        mPrinter.setPrinter(
-                            BluetoothPrinter.COMM_ALIGN,
-                            BluetoothPrinter.COMM_ALIGN_CENTER
-                        )
-                        val barcode = Barcode(
-                            BluetoothPrinter.BAR_CODE_TYPE_CODE128,
-                            infoBean.ayBitmapX,
-                            infoBean.ayBitmapY,
-                            infoBean.ayBitmapZ,
-                            infoBean.ayCodeUrl
-                        )
+                        mPrinter.setPrinter(BluetoothPrinter.COMM_ALIGN,
+                            BluetoothPrinter.COMM_ALIGN_CENTER)
+                        val barcode = Barcode(BluetoothPrinter.BAR_CODE_TYPE_CODE128,
+                            infoBean.param1,
+                            infoBean.param2,
+                            infoBean.param3,
+                            infoBean.ayCodeUrl)
                         mPrinter.printBarCode(barcode)
                     }
                     PrintLineInfoBean.CONTENT_DOTTED_LINE -> {
@@ -1416,6 +1367,7 @@ class ReceiptPrintUtil {
             AutoReplyPrint.INSTANCE.CP_Pos_ResetPrinter(pointer)
             AutoReplyPrint.INSTANCE.CP_Pos_SetMultiByteMode(pointer)
             for (infoBean in list!!) {
+                print.setFontSizeCmd(infoBean.fontSize)
                 AutoReplyPrint.INSTANCE.CP_Pos_SetMultiByteEncoding(
                     pointer,
                     infoBean.multiByteEncoding
@@ -1478,13 +1430,13 @@ class ReceiptPrintUtil {
                         )
                         AutoReplyPrint.INSTANCE.CP_Port_Write(pointer, bytes, bytes.size, 10000)
                     }
-                    PrintLineInfoBean.CONTENT_BARCODE, PrintLineInfoBean.CONTENT_BITMAP -> {
+                    PrintLineInfoBean.CONTENT_BITMAP -> {
                         AutoReplyPrint.INSTANCE.CP_Pos_SetTextBold(pointer, 1)
                         AutoReplyPrint.INSTANCE.CP_Pos_SetAlignment(
                             pointer,
                             AutoReplyPrint.CP_Pos_Alignment_HCenter
                         )
-                        val bitmap = infoBean.bitmap
+                        val bitmap = infoBean.fkBitmap
                         AutoReplyPrint.CP_Pos_PrintRasterImageFromData_Helper.PrintRasterImageFromBitmap(
                             pointer,
                             bitmap!!.width,
@@ -1493,6 +1445,27 @@ class ReceiptPrintUtil {
                             AutoReplyPrint.CP_ImageBinarizationMethod_ErrorDiffusion,
                             AutoReplyPrint.CP_ImageCompressionMethod_Level1
                         )
+
+                        AutoReplyPrint.INSTANCE.CP_Pos_SetTextScale(pointer, 0, 0)
+                        AutoReplyPrint.INSTANCE.CP_Pos_FeedLine(pointer, 1)
+                    }
+                    PrintLineInfoBean.CONTENT_BARCODE -> {
+                        AutoReplyPrint.INSTANCE.CP_Pos_SetTextBold(pointer, 1)
+                        AutoReplyPrint.INSTANCE.CP_Pos_SetAlignment(
+                            pointer,
+                            AutoReplyPrint.CP_Pos_Alignment_HCenter
+                        )
+                        val bitmap = infoBean.fkBitmap
+                        AutoReplyPrint.CP_Pos_PrintRasterImageFromData_Helper.PrintRasterImageFromBitmap(
+                            pointer,
+                            bitmap!!.width,
+                            bitmap.height,
+                            bitmap,
+                            AutoReplyPrint.CP_ImageBinarizationMethod_ErrorDiffusion,
+                            AutoReplyPrint.CP_ImageCompressionMethod_Level1
+                        )
+
+                        AutoReplyPrint.INSTANCE.CP_Pos_SetTextScale(pointer, 0, 0)
                     }
                     PrintLineInfoBean.CONTENT_DOTTED_LINE -> {
                         AutoReplyPrint.INSTANCE.CP_Pos_SetTextBold(pointer, 0)
@@ -1510,5 +1483,35 @@ class ReceiptPrintUtil {
             AutoReplyPrint.INSTANCE.CP_Pos_FeedLine(pointer, 4)
         }
 
+        /**
+         * Drawable转换成一个Bitmap
+         *
+         * @param drawable drawable对象
+         * @return
+         */
+        @JvmStatic
+        fun drawableToBitmap(drawable: Drawable): Bitmap? {
+            val bitmap = Bitmap.createBitmap(drawable.intrinsicWidth, drawable.intrinsicHeight,
+                if (drawable.opacity != PixelFormat.OPAQUE) Bitmap.Config.ARGB_8888 else Bitmap.Config.RGB_565)
+            val canvas = Canvas(bitmap)
+            drawable.setBounds(0, 0, drawable.intrinsicWidth, drawable.intrinsicHeight)
+            drawable.draw(canvas)
+            return bitmap
+        }
+
+        @JvmStatic
+        fun addBackgroundSynthesis(bg: Bitmap, icon: Bitmap): Bitmap? {
+            val paint = Paint()
+            val canvas = Canvas(bg)
+            val b1h = bg.height
+            val b2w = icon.width
+            val b2h = icon.height
+            val bx = (WIDTH_PIXEL - b2w) / 2
+            val by = (b1h - b2h) / 2
+            canvas.drawBitmap(icon, bx.toFloat(), by.toFloat(), paint)
+            canvas.save()
+            canvas.restore()
+            return bg
+        }
     }
 }

@@ -28,7 +28,7 @@ class PrintDeviceListDialog(context: Context?, private val listener: DeviceSelec
     private var lastClickTime: Long = 0
     private var recyclerView: RecyclerView? = null
     private var flClose: FrameLayout? = null
-    override fun onCreate(savedInstanceState: Bundle) {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.dialog_print_device_list)
         initSize()

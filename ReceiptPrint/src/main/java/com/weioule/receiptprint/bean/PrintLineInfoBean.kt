@@ -9,8 +9,8 @@ import android.graphics.Bitmap
  */
 class PrintLineInfoBean {
     var fontBold = 0 //加粗模式
-    var ayFontBold = 0 //爱印打印机加粗模式
     var fontSize = 0 //字体大小
+    var ayFontBold = 0 //爱印打印机加粗模式
     var ayFontSize = 0 //爱印打印机字体大小
     var fontAlign = 0 //对齐方式
     var columnNum = 0 //排版列数
@@ -19,14 +19,12 @@ class PrintLineInfoBean {
     var contentLeft: String? = null//左边内容
     var contentRight: String? = null//右边内容
     var contentCenter: String? = null//中间内容
-    var bitmap: Bitmap? = null//图片、二维码bitmap（汉印、复坤）
+    var hyBitmap: Bitmap? = null//图片、二维码bitmap（汉印）
+    var fkBitmap: Bitmap? = null//图片、二维码bitmap（爱印）
     var ayCodeUrl: String? = null//图片、二维码url  （复坤）
-    var hyBitmapX = 0 //图片、二维码bitmap 打印配置(汉印)
-    var hyBitmapY = 0 //图片、二维码bitmap 打印配置 (汉印)
-    var ayBitmapX = 0 //图片、二维码bitmap 打印配置 (爱印)
-    var ayBitmapY = 0 //图片、二维码bitmap 打印配置（爱印)
-    var ayBitmapZ = 0 //图片、二维码bitmap 打印配置（爱印)
-    var fkBitmapWidth = 0 //图片、二维码bitmap 打印宽度 (复坤)
+    var param1 = 0 //详见开发文档 Barcode类介绍 (爱印)
+    var param2 = 0 //详见开发文档 Barcode类介绍 (爱印)
+    var param3 = 0 //详见开发文档 Barcode类介绍 (爱印)
     var multiByteEncoding = 0 //编码格式:0=gbk  1=utf-8
     var feedLine = 1 //空行数
 
@@ -61,7 +59,6 @@ class PrintLineInfoBean {
         const val CONTENT_TXT = 0 // 文字
         const val CONTENT_BITMAP = 1 // 图片
         const val CONTENT_BARCODE = 2 // 条码图片
-        const val CONTENT_QRCODE = 3 // 二维码
         const val CONTENT_NEW_LINE = 4 // 换行
         const val CONTENT_DOTTED_LINE = 5 // 虚线
         const val CONTENT_BLANK_LINE = 6 // 空行
